@@ -42,7 +42,7 @@
 
 ###### 我们将创建一个表示商品（IGoods）的接口，和实现 IGoods 接口的实体(GoodsImpl)，以及商品结算的接口 ISettlement以及结算的实现类（SettlementImpl）.
 
-###### 然后我们创建一个 Buy 类，带有 IGoods 的 ArrayList 和一个通过结合 IGoods 来创建不同类型的 Buy 对象的 BuyBuilder。Main是我们的演示类，使用 BuyBuilder 来创建一个 Buy。
+###### 然后我们创建一个 Buy 类，带有 IGoods 的 ArrayList 和一个通过结合 IGoods 来创建不同类型的 Buy 对象的 BuyBuilder。Main是我的启动类，演示类使用 BuyBuilder 来创建一个 Buy。
 
 ![建造者模式的 UML 图](https://github.com/wanwujiedao/pattern/blob/master/img/builder_pattern_uml_diagram.jpg)
 
