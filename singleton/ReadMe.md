@@ -51,7 +51,7 @@
 ***
 
 ## 实现
-###### 我们将创建一个 SingletonObject 类。SingletonObject 类有它的私有构造函数和本身的一个静态实例。SingletonObject 类提供了一个静态方法，供外界获取它的静态实例。Main是我的演示类，使用 SingletonObject 类来获取 SingletonObject 对象。
+###### 我们将创建一个 SingletonObject 类。SingletonObject 类有它的私有构造函数和本身的一个静态实例。SingletonObject 类提供了一个静态方法，供外界获取它的静态实例。Main是我的启动类，演示类使用 SingletonObject 类来获取 SingletonObject 对象。
 
 ![单例模式的 UML 图](https://github.com/wanwujiedao/pattern/blob/master/img/singleton_pattern_uml_diagram.jpg)
 
