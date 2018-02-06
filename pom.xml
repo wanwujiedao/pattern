@@ -12,6 +12,7 @@
         <module>factory</module>
         <module>abstractfactory</module>
         <module>singleton</module>
+        <module>builder</module>
     </modules>
 
 

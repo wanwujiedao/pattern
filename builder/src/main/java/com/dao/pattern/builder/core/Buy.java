@@ -17,12 +17,33 @@ import java.util.List;
  */
 
 public class Buy {
+
+   /**
+    * 商品集合
+    */
    private List<IGoods> goodsList = new ArrayList<IGoods>();
 
+   /**
+    * 添加商品
+    *
+    * @author 阿导
+    * @time 2018/2/6
+    * @CopyRight 万物皆导
+    * @param goods
+    * @return void
+    */
    public void addGoods(IGoods goods){
       goodsList.add(goods);
    }
 
+   /**
+    * 统计价格
+    *
+    * @author 阿导
+    * @time 2018/2/6
+    * @CopyRight 万物皆导
+    * @return float
+    */
    public float getCost(){
       float cost = 0.0f;
       for (IGoods goods : goodsList) {
@@ -30,7 +51,14 @@ public class Buy {
       }        
       return cost;
    }
-
+   /**
+    * 显示信息
+    *
+    * @author 阿导
+    * @time 2018/2/6
+    * @CopyRight 万物皆导
+    * @return void
+    */
    public void showGoods(){
       for (IGoods goods : goodsList) {
          System.out.println("============================");

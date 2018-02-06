@@ -18,13 +18,29 @@ import com.dao.pattern.builder.extend.Rice;
 
 public class BuyBuilder {
 
+   /**
+    * 以数量结算的商品
+    *
+    * @author 阿导
+    * @time 2018/2/6
+    * @CopyRight 万物皆导
+    * @return com.dao.pattern.builder.core.Buy
+    */
    public Buy prepareNumberGoods(){
       Buy buy = new Buy();
       buy.addGoods(new Dumplings());
       buy.addGoods(new Milk());
       return buy;
-   }   
+   }
 
+   /**
+    * 以质量结算的商品
+    *
+    * @author 阿导
+    * @time 2018/2/6
+    * @CopyRight 万物皆导
+    * @return com.dao.pattern.builder.core.Buy
+    */
    public Buy prepareQualityGoods (){
       Buy buy = new Buy();
       buy.addGoods(new Apple());
