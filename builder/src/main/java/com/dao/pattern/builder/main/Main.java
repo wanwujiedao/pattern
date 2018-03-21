@@ -15,7 +15,15 @@ import com.dao.pattern.builder.core.BuyBuilder;
  * @updated 2018-02-05 18:04:00
  */
 public class Main {
-
+    /**
+     * 主方法入口
+     *
+     * @author 阿导
+     * @time 2018/3/21
+     * @CopyRight 万物皆导
+     * @param arg
+     * @return void
+     */
     public static void main(String[] arg){
         BuyBuilder buyBuilder = new BuyBuilder();
 
