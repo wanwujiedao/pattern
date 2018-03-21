@@ -390,10 +390,10 @@ public class Main {
      * @author 阿导
      * @time 2018/1/30
      * @CopyRight 万物皆导
-     * @param arg
+     * @param args
      * @return void
      */
-    public static void main(String[] arg){
+    public static void main(String[] args){
         //液体啊
         AbstractFactory liquid = FactoryProducer.getFactory(FactoryProducer.LIQUID);
         //汽油

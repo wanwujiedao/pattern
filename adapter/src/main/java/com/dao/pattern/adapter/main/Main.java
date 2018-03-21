@@ -19,10 +19,10 @@ public class Main {
      * @author 阿导
      * @time 2018/3/21
      * @CopyRight 万物皆导
-     * @param arg
+     * @param args
      * @return void
      */
-    public static void main(String[] arg){
+    public static void main(String[] args){
         Container container=new ContainerImpl();
 
         container.assemble("liquid","水");
