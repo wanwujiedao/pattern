@@ -49,7 +49,7 @@ public class Human extends Animals {
      */
     @Override
     public void voice() {
-        //人妖说话了
+        //人要说话了
         voice.say(this.country,this.skin);
     }
 }
