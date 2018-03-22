@@ -27,7 +27,7 @@ public class Human extends Animals {
      *
      * @author 阿导
      * @time 2018/3/21
-     * @CopyRight 杭州微财科技有限公司
+     * @CopyRight 万物皆导
      * @param country
      * @param skin
      * @param voice
@@ -45,7 +45,7 @@ public class Human extends Animals {
      * @return void
      * @author 阿导
      * @time 2018/3/21
-     * @CopyRight 杭州微财科技有限公司
+     * @CopyRight 万物皆导
      */
     @Override
     public void voice() {
