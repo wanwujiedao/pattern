@@ -15,7 +15,18 @@
         <module>builder</module>
         <module>prototype</module>
         <module>adapter</module>
+        <module>bridge</module>
+        <module>filter</module>
     </modules>
 
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.46</version>
+        </dependency>
+
+    </dependencies>
 
 </project>
