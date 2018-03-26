@@ -123,6 +123,7 @@
          * @time 2018/3/26
          * @CopyRight 万物皆导
          */
+        @Override
         public String name() {
             return "狗";
         }
@@ -154,6 +155,7 @@
          * @time 2018/3/26
          * @CopyRight 万物皆导
          */
+        @Override 
         public String name() {
             return "猫";
         }
