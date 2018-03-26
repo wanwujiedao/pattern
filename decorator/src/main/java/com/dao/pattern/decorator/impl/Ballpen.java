@@ -21,6 +21,7 @@ public class Ballpen implements Pen {
      * @time 2018/3/24
      * @CopyRight 万物皆导
      */
+    @Override
     public void name() {
         System.out.println("我是圆珠笔。");
     }

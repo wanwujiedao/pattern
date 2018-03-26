@@ -21,7 +21,8 @@ public class Pencil implements Pen {
      * @time 2018/3/24
      * @CopyRight 万物皆导
      */
-    public void name() {
+     @Override
+     public void name() {
         System.out.println("我是铅笔。");
     }
 }

@@ -115,6 +115,7 @@
          * @time 2018/3/24
          * @CopyRight 万物皆导
          */
+        @Override
         public void name() {
             System.out.println("我是铅笔。");
         }
@@ -146,6 +147,7 @@
          * @time 2018/3/24
          * @CopyRight 万物皆导
          */
+        @Override
         public void name() {
             System.out.println("我是圆珠笔。");
         }
@@ -199,6 +201,7 @@
          * @time 2018/3/24
          * @CopyRight 万物皆导
          */
+        @Override
         public void name() {
             pen.name();
         }
