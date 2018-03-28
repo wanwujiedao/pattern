@@ -152,7 +152,7 @@
 
 ```
 
-> 步骤 ： 逻辑运算规则实现
+> 步骤 3： 逻辑运算规则实现
 
 ```markdown
 
@@ -320,7 +320,7 @@
 
 ```
 
-> 步骤 ： ExpressionMaker 使用 Expression 类来创建规则，作为解释器生成器
+> 步骤 4： ExpressionMaker 使用 Expression 类来创建规则，作为解释器生成器
 
 ```markdown
 
@@ -390,7 +390,7 @@
 
 ```
 
-> 步骤 3：Main 是演示类，从 ExpressionMaker 获取解释器，并解析它们。
+> 步骤 5：Main 是演示类，从 ExpressionMaker 获取解释器，并解析它们。
 
 ```markdown
 
@@ -438,7 +438,7 @@
 
 ```
 
-> 步骤 4：验证输出。
+> 步骤 6：验证输出。
 
 ```markdown
     
