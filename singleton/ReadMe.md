@@ -26,6 +26,7 @@
 - **关键代码**：构造函数是私有的。
 
 - **应用实例**： 
+
 > 1、一个党只能有一个主席。
 
 > 2、Windows 是多进程多线程的，在操作一个文件的时候，就不可避免地出现多个进程或线程同时操作一个文件的现象，所以所有文件的处理必须通过唯一的实例来进行。
@@ -33,6 +34,7 @@
 > 3、一些设备管理器常常设计为单例模式，比如一个电脑有两台打印机，在输出的时候就要处理不能两台打印机打印同一个文件。
 
 - **优点**：
+
 > 1、在内存里只有一个实例，减少了内存的开销，尤其是频繁的创建和销毁实例（比如管理学院首页页面缓存）。
 
 > 2、避免对资源的多重占用（比如写文件操作）。
@@ -40,6 +42,7 @@
 - **缺点**：没有接口，不能继承，与单一职责原则冲突，一个类应该只关心内部逻辑，而不关心外面怎么样来实例化。
 
 - **使用场景**：
+
 > 1、要求生产唯一序列号。 
 
 > 2、WEB 中的计数器，不用每次刷新都在数据库里加一次，用单例先缓存起来。 
@@ -51,108 +54,112 @@
 ***
 
 ## 实现
+
 ###### 我们将创建一个 SingletonObject 类。SingletonObject 类有它的私有构造函数和本身的一个静态实例。SingletonObject 类提供了一个静态方法，供外界获取它的静态实例。Main是我的启动类，演示类使用 SingletonObject 类来获取 SingletonObject 对象。
 
 ![单例模式的 UML 图](https://github.com/wanwujiedao/pattern/blob/master/img/singleton_pattern_uml_diagram.jpg)
 
 > 步骤 1：创建一个 Singleton 类。
 
-```markdown
 **SingletonThree.java**
-package com.dao.pattern.singleton.demo;
 
-/**
- * 单例模式-饿汉式
- * 这种方式比较常用，但容易产生垃圾对象。
- *
- * @author 阿导
- * @version BUILD1001
- * @fileName com.dao.pattern.singleten.core.SingletonThree.java
- * @CopyRright (c) 2018-万物皆导
- * @created 2018-02-05 09:41:00
- * @modifier 阿导
- * @updated 2018-02-05 09:41:00
- */
-public class SingletonThree {
-
+```markdown
+    
+    package com.dao.pattern.singleton.demo;
+    
     /**
-     * 创建一个 SingletonThree 的对象
-     */
-    private static SingletonThree instance=new SingletonThree();
-
-    /**
-     * 构造方法私有
+     * 单例模式-饿汉式
+     * 这种方式比较常用，但容易产生垃圾对象。
      *
      * @author 阿导
-     * @time 2018/2/5
-     * @CopyRight 万物皆导
-     * @return
+     * @version BUILD1001
+     * @fileName com.dao.pattern.singleten.core.SingletonThree.java
+     * @CopyRright (c) 2018-万物皆导
+     * @created 2018-02-05 09:41:00
+     * @modifier 阿导
+     * @updated 2018-02-05 09:41:00
      */
-    private SingletonThree(){}
-    /**
-     * 获取唯一可使用的对象
-     *
-     * @author 阿导
-     * @time 2018/2/5
-     * @CopyRight 万物皆导
-     * @param
-     * @return com.dao.pattern.demo.SingletonThree
-     */
-    public static SingletonThree getInstance(){
-        return instance;
+    public class SingletonThree {
+    
+        /**
+         * 创建一个 SingletonThree 的对象
+         */
+        private static SingletonThree instance=new SingletonThree();
+    
+        /**
+         * 构造方法私有
+         *
+         * @author 阿导
+         * @time 2018/2/5
+         * @CopyRight 万物皆导
+         * @return
+         */
+        private SingletonThree(){}
+        /**
+         * 获取唯一可使用的对象
+         *
+         * @author 阿导
+         * @time 2018/2/5
+         * @CopyRight 万物皆导
+         * @param
+         * @return com.dao.pattern.demo.SingletonThree
+         */
+        public static SingletonThree getInstance(){
+            return instance;
+        }
+        /**
+         * 让这个对象说些什么
+         *
+         * @author 阿导
+         * @time 2018/2/5
+         * @CopyRight 万物皆导
+         * @param name
+         * @return void
+         */
+        public void saySomething(String name){
+            System.out.println("（饿汉式）您好！".concat(name));
+        }
+    
     }
-    /**
-     * 让这个对象说些什么
-     *
-     * @author 阿导
-     * @time 2018/2/5
-     * @CopyRight 万物皆导
-     * @param name
-     * @return void
-     */
-    public void saySomething(String name){
-        System.out.println("（饿汉式）您好！".concat(name));
-    }
-
-}
 
 ```
 
 > 步骤 2：从 singleton 类获取唯一的对象。
 
-```markdown
-
 **Main.java**
-package com.dao.pattern.singleton.main;
-import com.dao.pattern.singleton.core.*;
-import com.dao.pattern.singleton.demo.SingletonObject;
 
-/**
- * 主函数入口（启动类）
- *
- * @author 阿导
- * @version BUILD1001
- * @fileName com.dao.pattern.singleten.main.Main.java
- * @CopyRright (c) 2018-万物皆导
- * @created 2018-02-05 09:42:00
- * @modifier 阿导
- * @updated 2018-02-05 09:42:00
- */
-public class Main {
+```markdown
+    
+    package com.dao.pattern.singleton.main;
+    import com.dao.pattern.singleton.core.*;
+    import com.dao.pattern.singleton.demo.SingletonObject;
+    
     /**
-     * 主程序入口
+     * 主函数入口（启动类）
      *
      * @author 阿导
-     * @time 2018/1/30
-     * @CopyRight 万物皆导
-     * @param args
-     * @return void
+     * @version BUILD1001
+     * @fileName com.dao.pattern.singleten.main.Main.java
+     * @CopyRright (c) 2018-万物皆导
+     * @created 2018-02-05 09:42:00
+     * @modifier 阿导
+     * @updated 2018-02-05 09:42:00
      */
-    public static void main(String[] args){
-        SingletonThree three=SingletonThree.getInstance();
-        three.saySomething("万物皆导。");
+    public class Main {
+        /**
+         * 主程序入口
+         *
+         * @author 阿导
+         * @time 2018/1/30
+         * @CopyRight 万物皆导
+         * @param args
+         * @return void
+         */
+        public static void main(String[] args){
+            SingletonThree three=SingletonThree.getInstance();
+            three.saySomething("万物皆导。");
+        }
     }
-}
 
 ```
 
@@ -178,77 +185,78 @@ public class Main {
 
 > 代码实例：
 
-```markdown
-
 **SingletonOne.java**
 
-package com.dao.pattern.singleton.core;
-
-/**
- * 单例模式-懒汉式，线程不安全
- * 这种方式是最基本的实现方式，这种实现最大的问题就是不支持多线程。因为没有加锁 synchronized，所以严格意义上它并不算单例模式。
- * 这种方式 lazy loading 很明显，不要求线程安全，在多线程不能正常工作。
- *
- * @author 阿导
- * @version BUILD1001
- * @fileName com.dao.pattern.singleten.core.SingletonOne.java
- * @CopyRright (c) 2018-万物皆导
- * @created 2018-02-05 09:41:00
- * @modifier 阿导
- * @updated 2018-02-05 09:41:00
- */
-public class SingletonOne {
-
+```markdown
+    
+    package com.dao.pattern.singleton.core;
+    
     /**
-     * 创建一个 SingletonOne 的对象
-     */
-    private static SingletonOne instance;
-
-    /**
-     * 构造方法私有
+     * 单例模式-懒汉式，线程不安全
+     * 这种方式是最基本的实现方式，这种实现最大的问题就是不支持多线程。因为没有加锁 synchronized，所以严格意义上它并不算单例模式。
+     * 这种方式 lazy loading 很明显，不要求线程安全，在多线程不能正常工作。
      *
      * @author 阿导
-     * @time 2018/2/5
-     * @CopyRight 万物皆导
-     * @return
+     * @version BUILD1001
+     * @fileName com.dao.pattern.singleten.core.SingletonOne.java
+     * @CopyRright (c) 2018-万物皆导
+     * @created 2018-02-05 09:41:00
+     * @modifier 阿导
+     * @updated 2018-02-05 09:41:00
      */
-    private SingletonOne (){}
-
-    /**
-     * 获取可使用的对象
-     *
-     * @author 阿导
-     * @time 2018/2/5
-     * @CopyRight 万物皆导
-     * @param
-     * @return com.dao.pattern.singleton.demo.SingletonOne
-     */
-    public static SingletonOne getInstance() {
-        //判断是否存在
-        if (instance == null) {
-            instance = new SingletonOne();
+    public class SingletonOne {
+    
+        /**
+         * 创建一个 SingletonOne 的对象
+         */
+        private static SingletonOne instance;
+    
+        /**
+         * 构造方法私有
+         *
+         * @author 阿导
+         * @time 2018/2/5
+         * @CopyRight 万物皆导
+         * @return
+         */
+        private SingletonOne (){}
+    
+        /**
+         * 获取可使用的对象
+         *
+         * @author 阿导
+         * @time 2018/2/5
+         * @CopyRight 万物皆导
+         * @param
+         * @return com.dao.pattern.singleton.demo.SingletonOne
+         */
+        public static SingletonOne getInstance() {
+            //判断是否存在
+            if (instance == null) {
+                instance = new SingletonOne();
+            }
+            //返回对象
+            return instance;
         }
-        //返回对象
-        return instance;
-    }
-    /**
-     * 让这个对象说些什么
-     *
-     * @author 阿导
-     * @time 2018/2/5
-     * @CopyRight 万物皆导
-     * @param name
-     * @return void
-     */
-    public void saySomething(String name){
-        System.out.println("（懒汉式，线程不安全）您好！".concat(name));
-    }
-} 
+        /**
+         * 让这个对象说些什么
+         *
+         * @author 阿导
+         * @time 2018/2/5
+         * @CopyRight 万物皆导
+         * @param name
+         * @return void
+         */
+        public void saySomething(String name){
+            System.out.println("（懒汉式，线程不安全）您好！".concat(name));
+        }
+    } 
 
 ```
 
 
 ###### 接下来介绍的几种实现方式都支持多线程，但是在性能上有所差异。
+
 - 2、懒汉式，线程安全
 
 > 是否 Lazy 初始化：是
@@ -265,69 +273,70 @@ public class SingletonOne {
 
 > 代码实例：
 
-```markdown
 **SingletonTwo.java**
 
-package com.dao.pattern.singleton.core;
-/**
- * 单例模式-懒汉式，线程安全
- * 这种方式具备很好的 lazy loading，能够在多线程中很好的工作，但是，效率很低，99% 情况下不需要同步。
- *
- * @author 阿导
- * @version BUILD1001
- * @fileName com.dao.pattern.singleten.core.SingletonTwo.java
- * @CopyRright (c) 2018-万物皆导
- * @created 2018-02-05 09:41:00
- * @modifier 阿导
- * @updated 2018-02-05 09:41:00
- */
-public class SingletonTwo {
+```markdown
+    
+    package com.dao.pattern.singleton.core;
     /**
-     * 创建一个 SingletonTwo 的对象
-     */
-    private static SingletonTwo instance;
-
-    /**
-     * 构造方法私有
+     * 单例模式-懒汉式，线程安全
+     * 这种方式具备很好的 lazy loading，能够在多线程中很好的工作，但是，效率很低，99% 情况下不需要同步。
      *
      * @author 阿导
-     * @time 2018/2/5
-     * @CopyRight 万物皆导
-     * @return
+     * @version BUILD1001
+     * @fileName com.dao.pattern.singleten.core.SingletonTwo.java
+     * @CopyRright (c) 2018-万物皆导
+     * @created 2018-02-05 09:41:00
+     * @modifier 阿导
+     * @updated 2018-02-05 09:41:00
      */
-    private SingletonTwo (){}
-
-    /**
-     * 通过同步关键字-synchronized 获取可使用的对象
-     *
-     * @author 阿导
-     * @time 2018/2/5
-     * @CopyRight 万物皆导
-     * @param
-     * @return com.dao.pattern.singleton.demo.SingletonOne
-     */
-    public static synchronized SingletonTwo getInstance() {
-        //判断是否存在
-        if (instance == null) {
-            instance = new SingletonTwo();
+    public class SingletonTwo {
+        /**
+         * 创建一个 SingletonTwo 的对象
+         */
+        private static SingletonTwo instance;
+    
+        /**
+         * 构造方法私有
+         *
+         * @author 阿导
+         * @time 2018/2/5
+         * @CopyRight 万物皆导
+         * @return
+         */
+        private SingletonTwo (){}
+    
+        /**
+         * 通过同步关键字-synchronized 获取可使用的对象
+         *
+         * @author 阿导
+         * @time 2018/2/5
+         * @CopyRight 万物皆导
+         * @param
+         * @return com.dao.pattern.singleton.demo.SingletonOne
+         */
+        public static synchronized SingletonTwo getInstance() {
+            //判断是否存在
+            if (instance == null) {
+                instance = new SingletonTwo();
+            }
+            //返回对象
+            return instance;
         }
-        //返回对象
-        return instance;
-    }
-
-    /**
-     * 让这个对象说些什么
-     *
-     * @author 阿导
-     * @time 2018/2/5
-     * @CopyRight 万物皆导
-     * @param name
-     * @return void
-     */
-    public void saySomething(String name){
-        System.out.println("（懒汉式，线程安全）您好！".concat(name));
-    }
-} 
+    
+        /**
+         * 让这个对象说些什么
+         *
+         * @author 阿导
+         * @time 2018/2/5
+         * @CopyRight 万物皆导
+         * @param name
+         * @return void
+         */
+        public void saySomething(String name){
+            System.out.println("（懒汉式，线程安全）您好！".concat(name));
+        }
+    } 
 
 ```
 
@@ -347,65 +356,66 @@ public class SingletonTwo {
 
 > 代码实例：
 
-```markdown
 **SingletonThree.java**
 
-package com.dao.pattern.singleton.core;
-
-/**
- * 单例模式-饿汉式
- * 这种方式比较常用，但容易产生垃圾对象。
- *
- * @author 阿导
- * @version BUILD1001
- * @fileName com.dao.pattern.singleten.core.SingletonThree.java
- * @CopyRright (c) 2018-万物皆导
- * @created 2018-02-05 09:41:00
- * @modifier 阿导
- * @updated 2018-02-05 09:41:00
- */
-public class SingletonThree {
-
+```markdown
+    
+    package com.dao.pattern.singleton.core;
+    
     /**
-     * 创建一个 SingletonThree 的对象
-     */
-    private static SingletonThree instance=new SingletonThree();
-
-    /**
-     * 构造方法私有
+     * 单例模式-饿汉式
+     * 这种方式比较常用，但容易产生垃圾对象。
      *
      * @author 阿导
-     * @time 2018/2/5
-     * @CopyRight 万物皆导
-     * @return
+     * @version BUILD1001
+     * @fileName com.dao.pattern.singleten.core.SingletonThree.java
+     * @CopyRright (c) 2018-万物皆导
+     * @created 2018-02-05 09:41:00
+     * @modifier 阿导
+     * @updated 2018-02-05 09:41:00
      */
-    private SingletonThree(){}
-    /**
-     * 获取唯一可使用的对象
-     *
-     * @author 阿导
-     * @time 2018/2/5
-     * @CopyRight 万物皆导
-     * @param
-     * @return com.dao.pattern.demo.SingletonThree
-     */
-    public static SingletonThree getInstance(){
-        return instance;
+    public class SingletonThree {
+    
+        /**
+         * 创建一个 SingletonThree 的对象
+         */
+        private static SingletonThree instance=new SingletonThree();
+    
+        /**
+         * 构造方法私有
+         *
+         * @author 阿导
+         * @time 2018/2/5
+         * @CopyRight 万物皆导
+         * @return
+         */
+        private SingletonThree(){}
+        /**
+         * 获取唯一可使用的对象
+         *
+         * @author 阿导
+         * @time 2018/2/5
+         * @CopyRight 万物皆导
+         * @param
+         * @return com.dao.pattern.demo.SingletonThree
+         */
+        public static SingletonThree getInstance(){
+            return instance;
+        }
+        /**
+         * 让这个对象说些什么
+         *
+         * @author 阿导
+         * @time 2018/2/5
+         * @CopyRight 万物皆导
+         * @param name
+         * @return void
+         */
+        public void saySomething(String name){
+            System.out.println("（饿汉式）您好！".concat(name));
+        }
+    
     }
-    /**
-     * 让这个对象说些什么
-     *
-     * @author 阿导
-     * @time 2018/2/5
-     * @CopyRight 万物皆导
-     * @param name
-     * @return void
-     */
-    public void saySomething(String name){
-        System.out.println("（饿汉式）您好！".concat(name));
-    }
-
-}
 
 ```
 
@@ -423,76 +433,76 @@ public class SingletonThree {
 
 > 代码实例：
 
-```markdown
-
 **SingletonFour.java**
 
-package com.dao.pattern.singleton.core;
-/**
- * 单例模式-双检锁/双重校验锁（DCL，即 double-checked locking）
- * 这种方式采用双锁机制，安全且在多线程情况下能保持高性能。
- *
- * @author 阿导
- * @version BUILD1001
- * @fileName com.dao.pattern.singleten.core.SingletonFour.java
- * @CopyRright (c) 2018-万物皆导
- * @created 2018-02-05 09:41:00
- * @modifier 阿导
- * @updated 2018-02-05 09:41:00
- */
-public class SingletonFour {
+```markdown
+    
+    package com.dao.pattern.singleton.core;
     /**
-     * 创建一个 SingletonFour 的对象，使用 volatile 关键字修饰的变量，用来确保将变量的更新操作通知到其他线程
-     */
-    private volatile static SingletonFour instance;
-
-    /**
-     * 构造方法私有
+     * 单例模式-双检锁/双重校验锁（DCL，即 double-checked locking）
+     * 这种方式采用双锁机制，安全且在多线程情况下能保持高性能。
      *
      * @author 阿导
-     * @time 2018/2/5
-     * @CopyRight 万物皆导
-     * @return
+     * @version BUILD1001
+     * @fileName com.dao.pattern.singleten.core.SingletonFour.java
+     * @CopyRright (c) 2018-万物皆导
+     * @created 2018-02-05 09:41:00
+     * @modifier 阿导
+     * @updated 2018-02-05 09:41:00
      */
-    private SingletonFour() {}
-
-    /**
-     * 通过双检锁/双重校验锁 获取可使用的对象
-     *
-     * @author 阿导
-     * @time 2018/2/5
-     * @CopyRight 万物皆导
-     * @param
-     * @return com.dao.pattern.singleton.core.SingletonOne
-     */
-    public static SingletonFour getInstance() {
-        //判断是否存在实例
-        if (instance == null) {
-            //同步锁限制，防止线程并发创建多个对象实例
-            synchronized (SingletonFour.class) {
-                if (instance == null) {
-                    instance = new SingletonFour();
+    public class SingletonFour {
+        /**
+         * 创建一个 SingletonFour 的对象，使用 volatile 关键字修饰的变量，用来确保将变量的更新操作通知到其他线程
+         */
+        private volatile static SingletonFour instance;
+    
+        /**
+         * 构造方法私有
+         *
+         * @author 阿导
+         * @time 2018/2/5
+         * @CopyRight 万物皆导
+         * @return
+         */
+        private SingletonFour() {}
+    
+        /**
+         * 通过双检锁/双重校验锁 获取可使用的对象
+         *
+         * @author 阿导
+         * @time 2018/2/5
+         * @CopyRight 万物皆导
+         * @param
+         * @return com.dao.pattern.singleton.core.SingletonOne
+         */
+        public static SingletonFour getInstance() {
+            //判断是否存在实例
+            if (instance == null) {
+                //同步锁限制，防止线程并发创建多个对象实例
+                synchronized (SingletonFour.class) {
+                    if (instance == null) {
+                        instance = new SingletonFour();
+                    }
                 }
             }
+            //返回实例
+            return instance;
         }
-        //返回实例
-        return instance;
-    }
-
-
-    /**
-     * 让这个对象说些什么
-     *
-     * @author 阿导
-     * @time 2018/2/5
-     * @CopyRight 万物皆导
-     * @param name
-     * @return void
-     */
-    public void saySomething(String name){
-        System.out.println("（双检锁/双重校验锁）您好！".concat(name));
-    }
-} 
+    
+    
+        /**
+         * 让这个对象说些什么
+         *
+         * @author 阿导
+         * @time 2018/2/5
+         * @CopyRight 万物皆导
+         * @param name
+         * @return void
+         */
+        public void saySomething(String name){
+            System.out.println("（双检锁/双重校验锁）您好！".concat(name));
+        }
+    } 
 
 ```
 
@@ -509,73 +519,73 @@ public class SingletonFour {
 
 > 代码实例：
 
-```markdown
-
 **SingletonFive.java**
 
-package com.dao.pattern.singleton.core;
-/**
- * 单例模式-登记式/静态内部类
- * 这种方式能达到双检锁方式一样的功效，但实现更简单。对静态域使用延迟初始化，应使用这种方式而不是双检锁方式。这种方式只适用于静态域的情况，双检锁方式可在实例域需要延迟初始化时使用。
- 这种方式同样利用了 classloder 机制来保证初始化 instance 时只有一个线程，它跟第 3 种方式不同的是：第 3 种方式只要 Singleton 类被装载了，那么 instance 就会被实例化（没有达到 lazy loading 效果），而这种方式是 Singleton 类被装载了，instance 不一定被初始化。因为 SingletonHolder 类没有被主动使用，只有通过显式调用 getInstance 方法时，才会显式装载 SingletonHolder 类，从而实例化 instance。想象一下，如果实例化 instance 很消耗资源，所以想让它延迟加载，另外一方面，又不希望在 Singleton 类加载时就实例化，因为不能确保 Singleton 类还可能在其他的地方被主动使用从而被加载，那么这个时候实例化 instance 显然是不合适的。这个时候，这种方式相比第 3 种方式就显得很合理。
- *
- * @author 阿导
- * @version BUILD1001
- * @fileName com.dao.pattern.singleten.demo.SingletonFive.java
- * @CopyRright (c) 2018-万物皆导
- * @created 2018-02-05 09:41:00
- * @modifier 阿导
- * @updated 2018-02-05 09:41:00
- */
-public class SingletonFive {
-
+```markdown
+    
+    package com.dao.pattern.singleton.core;
     /**
-     * 使用内部类创建实例
+     * 单例模式-登记式/静态内部类
+     * 这种方式能达到双检锁方式一样的功效，但实现更简单。对静态域使用延迟初始化，应使用这种方式而不是双检锁方式。这种方式只适用于静态域的情况，双检锁方式可在实例域需要延迟初始化时使用。
+     这种方式同样利用了 classloder 机制来保证初始化 instance 时只有一个线程，它跟第 3 种方式不同的是：第 3 种方式只要 Singleton 类被装载了，那么 instance 就会被实例化（没有达到 lazy loading 效果），而这种方式是 Singleton 类被装载了，instance 不一定被初始化。因为 SingletonHolder 类没有被主动使用，只有通过显式调用 getInstance 方法时，才会显式装载 SingletonHolder 类，从而实例化 instance。想象一下，如果实例化 instance 很消耗资源，所以想让它延迟加载，另外一方面，又不希望在 Singleton 类加载时就实例化，因为不能确保 Singleton 类还可能在其他的地方被主动使用从而被加载，那么这个时候实例化 instance 显然是不合适的。这个时候，这种方式相比第 3 种方式就显得很合理。
      *
      * @author 阿导
-     * @time 2018/2/5
-     * @CopyRight 万物皆导
+     * @version BUILD1001
+     * @fileName com.dao.pattern.singleten.demo.SingletonFive.java
+     * @CopyRright (c) 2018-万物皆导
+     * @created 2018-02-05 09:41:00
+     * @modifier 阿导
+     * @updated 2018-02-05 09:41:00
      */
-    private static class SingletonHolder {
-        private static final SingletonFive INSTANCE = new SingletonFive();
+    public class SingletonFive {
+    
+        /**
+         * 使用内部类创建实例
+         *
+         * @author 阿导
+         * @time 2018/2/5
+         * @CopyRight 万物皆导
+         */
+        private static class SingletonHolder {
+            private static final SingletonFive INSTANCE = new SingletonFive();
+        }
+        /**
+         * 构造方法私有
+         *
+         * @author 阿导
+         * @time 2018/2/5
+         * @CopyRight 万物皆导
+         * @return
+         */
+        private SingletonFive() {}
+    
+        /**
+         * 使用 final 关键字修饰，使其不可更改
+         *
+         * @author 阿导
+         * @time 2018/2/5
+         * @CopyRight 万物皆导
+         * @param
+         * @return com.dao.pattern.singleton.demo.SingletonFive
+         */
+        public static final SingletonFive getInstance() {
+            return SingletonHolder.INSTANCE;
+        }
+    
+    
+        /**
+         * 让这个对象说些什么
+         *
+         * @author 阿导
+         * @time 2018/2/5
+         * @CopyRight 万物皆导
+         * @param name
+         * @return void
+         */
+        public void saySomething(String name){
+            System.out.println("（登记式/静态内部类）您好！".concat(name));
+        }
     }
-    /**
-     * 构造方法私有
-     *
-     * @author 阿导
-     * @time 2018/2/5
-     * @CopyRight 万物皆导
-     * @return
-     */
-    private SingletonFive() {}
-
-    /**
-     * 使用 final 关键字修饰，使其不可更改
-     *
-     * @author 阿导
-     * @time 2018/2/5
-     * @CopyRight 万物皆导
-     * @param
-     * @return com.dao.pattern.singleton.demo.SingletonFive
-     */
-    public static final SingletonFive getInstance() {
-        return SingletonHolder.INSTANCE;
-    }
-
-
-    /**
-     * 让这个对象说些什么
-     *
-     * @author 阿导
-     * @time 2018/2/5
-     * @CopyRight 万物皆导
-     * @param name
-     * @return void
-     */
-    public void saySomething(String name){
-        System.out.println("（登记式/静态内部类）您好！".concat(name));
-    }
-}
 
 ```
 
@@ -594,39 +604,39 @@ public class SingletonFive {
 
 > 代码实例：
 
-```markdown
-
 **SingletonSix.java**
 
-package com.dao.pattern.singleton.core;
-/**
- * 单例模式-枚举
- * 这种方式具备很好的 lazy loading，能够在多线程中很好的工作，但是，效率很低，99% 情况下不需要同步。
- *
- * @author 阿导
- * @version BUILD1001
- * @fileName com.dao.pattern.singleten.demo.SingletonTwo.java
- * @CopyRright (c) 2018-万物皆导
- * @created 2018-02-05 09:41:00
- * @modifier 阿导
- * @updated 2018-02-05 09:41:00
- */
-public enum SingletonSix {
-    INSTANCE;  
-
+```markdown
+    
+    package com.dao.pattern.singleton.core;
     /**
-     * 让这个对象说些什么
+     * 单例模式-枚举
+     * 这种方式具备很好的 lazy loading，能够在多线程中很好的工作，但是，效率很低，99% 情况下不需要同步。
      *
      * @author 阿导
-     * @time 2018/2/5
-     * @CopyRight 万物皆导
-     * @param name
-     * @return void
+     * @version BUILD1001
+     * @fileName com.dao.pattern.singleten.demo.SingletonTwo.java
+     * @CopyRright (c) 2018-万物皆导
+     * @created 2018-02-05 09:41:00
+     * @modifier 阿导
+     * @updated 2018-02-05 09:41:00
      */
-    public void saySomething(String name){
-        System.out.println("（枚举）您好！".concat(name));
-    }
-} 
+    public enum SingletonSix {
+        INSTANCE;  
+    
+        /**
+         * 让这个对象说些什么
+         *
+         * @author 阿导
+         * @time 2018/2/5
+         * @CopyRight 万物皆导
+         * @param name
+         * @return void
+         */
+        public void saySomething(String name){
+            System.out.println("（枚举）您好！".concat(name));
+        }
+    } 
 
 ```
  
