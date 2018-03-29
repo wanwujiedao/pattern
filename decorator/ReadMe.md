@@ -56,9 +56,9 @@
 
 > 步骤 1：创建一个接口。
 
+**Pen.java**
+ 
 ```markdown
-
-    **Pen.java**
 
     package com.dao.pattern.decorator.interfaces;
     
@@ -88,10 +88,10 @@
 ```
 > 步骤 2：创建实现接口的实体类。
 
+**Pencil.java**
+
 ```markdown
-    
-    **Pencil.java**
-    
+        
     package com.dao.pattern.decorator.impl;
     
     import com.dao.pattern.decorator.interfaces.Pen;
@@ -121,8 +121,11 @@
         }
     }
 
+```
 
-    **Ballpen.java**
+**Ballpen.java**
+
+```markdown
 
     package com.dao.pattern.decorator.impl;
     
@@ -157,9 +160,9 @@
 
 > 步骤 3：创建实现了 PenDecorator 接口的抽象装饰类。
 
+**PenDecorator.java**
+  
 ```markdown
-
-    **PenDecorator.java**
 
     package com.dao.pattern.decorator.core;
     
@@ -211,9 +214,9 @@
 
 > 步骤 4：创建扩展了 PenDecorator 类的实体装饰类。
 
-```markdown
+**BlackPenDecorator.java**
 
-    **BlackPenDecorator.java**
+```markdown
 
     package com.dao.pattern.decorator.core;
     
@@ -264,9 +267,10 @@
 ```
 
 > 步骤 5：使用 BlackPenDecorator 来装饰 Pen 对象。
-```markdown
 
-    **Main.java**
+**Main.java**
+
+```markdown
     
     package com.dao.pattern.decorator.main;
     
