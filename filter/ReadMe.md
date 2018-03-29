@@ -13,9 +13,10 @@
 ![过滤器模式的 UML 图](https://github.com/wanwujiedao/pattern/blob/master/img/filter_pattern_uml_diagram.jpg)
 
 > 步骤 1：创建一个类，在该类上应用标准。
-```markdown
 
-    **Person.java**
+**Person.java**
+   
+```markdown
     
     package com.dao.pattern.filter.vo;
     
@@ -85,10 +86,10 @@
 
 > 步骤 2：为标准（Criteria）创建一个接口。
 
+**Criteria.java**
+
 ```markdown
-    
-    **Criteria.java**
-    
+        
     package com.dao.pattern.filter.interfaces;
     
     import com.dao.pattern.filter.vo.Person;
@@ -123,9 +124,9 @@
 
 > 步骤 3：创建实现了 Criteria 接口的实体类。
 
-```markdown
+**ChinaCriteria.java**
 
-    **ChinaCriteria.java**
+```markdown
     
     package com.dao.pattern.filter.impl;
     
@@ -169,8 +170,11 @@
         }
     }
 
+```
     
-    **AmericaCriteria.java**
+**AmericaCriteria.java**
+
+```markdown
 
     package com.dao.pattern.filter.impl;
     
@@ -214,8 +218,11 @@
         }
     }
 
+```
 
-    **YellowCriteria.java**
+**YellowCriteria.java**
+
+```markdown
 
     package com.dao.pattern.filter.impl;
     
@@ -259,8 +266,11 @@
         }
     }
 
+```
+   
+**WhiteCriteria.java**
 
-    **WhiteCriteria.java**
+```markdown
 
     package com.dao.pattern.filter.impl;
     
@@ -308,9 +318,11 @@
 
 > 步骤 4：配合一些逻辑运算实现 Criteria 接口的实体类。
 
+**AndCriteria.java**
+  
 ```markdown
     
-    **AndCriteria.java**
+  
     
     package com.dao.pattern.filter.core;
     
@@ -386,9 +398,12 @@
         }
     }
     
+```
     
-    **OrCriteria.java**
-    
+**OrCriteria.java**
+
+```markdown    
+
     package com.dao.pattern.filter.core;
     
     import com.dao.pattern.filter.interfaces.Criteria;
@@ -454,8 +469,11 @@
         }
     }
 
+```
 
-    **ContraryCriteria.java**
+**ContraryCriteria.java**
+
+```markdown
     
     package com.dao.pattern.filter.core;
     
@@ -521,9 +539,9 @@
 ```
 > 步骤 5：使用不同的标准（Criteria）和它们的结合来过滤 Person 对象的列表。
 
-```markdown
+**Main.java**
 
-    **Main.java**
+```markdown
     
     package com.dao.pattern.filter.main;
     
