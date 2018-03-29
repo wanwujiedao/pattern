@@ -71,9 +71,10 @@
 ![适配器模式的 UML 图](https://github.com/wanwujiedao/pattern/blob/master/img/adapter_pattern_uml_diagram.jpg)
 
 > 步骤 1：盛放容器和盛放处理的接口。
-```markdown
 
-    **Container.java**
+**Container.java**
+ 
+```markdown
 
     package com.dao.pattern.adapter.interfaces;
     
@@ -103,7 +104,11 @@
     }
     
     
-    **Assemble.java**
+```
+
+**Assemble.java**
+ 
+```markdown   
     
     package com.dao.pattern.adapter.interfaces;
     
@@ -143,9 +148,9 @@
 ```
 > 步骤 2：创建实现了 Assemble 接口的实体类。
 
+**AssembleLiquidImpl.java**
+ 
 ```markdown
-
-    **AssembleLiquidImpl.java**
     
     package com.dao.pattern.adapter.impl;
     
@@ -189,9 +194,12 @@
         }
     }
     
-    
-    **AssembleSolidImpl.java**
+```
 
+**AssembleSolidImpl.java**
+
+```markdown
+    
     package com.dao.pattern.adapter.impl;
     
     import com.dao.pattern.adapter.interfaces.Assemble;
@@ -238,9 +246,9 @@
 
 > 步骤 3：创建实现了 Container 接口的适配器类。
 
-```markdown
+**ContainerAdapter.java**
 
-    **ContainerAdapter.java**
+```markdown
 
     package com.dao.pattern.adapter.core;
     
@@ -307,10 +315,10 @@
 
 > 步骤 4：创建实现了 Container 接口的实体类。
 
+**ContainerImpl.java**
+ 
 ```markdown
     
-    **ContainerImpl.java**
-
     package com.dao.pattern.adapter.core;
     
     import com.dao.pattern.adapter.interfaces.Container;
@@ -355,9 +363,9 @@
 
 > 步骤 5：使用 ContainerImpl 来盛放不同状态的物品。
 
+**Main.java**
+ 
 ```markdown
-
-    **Main.java**
 
     package com.dao.pattern.adapter.main;
     
@@ -394,8 +402,9 @@
     }
 
 ```
-步骤 6
-验证输出。
+
+> 步骤 6：验证输出。
+
 ```markdown
 
   水是液体，请装在玻璃瓶
