@@ -60,7 +60,7 @@
 
 ###### AnimalsFactory 有一个 Animals 的 HashMap，其中键名为 Animals 实现类 Human 对象的性别。无论何时接收到请求，都会创建一个特定性别的人。AnimalsFactory 检查它的 HashMap 中的 Animals 对象，如果找到 Animals 对象，则返回该对象，否则将创建一个存储在 hashmap 中以备后续使用的新对象，并把该对象返回到客户端。
 
-###### Main，我们的演示类使用 AnimalsFactory 来获取 Animals 对象。它将向 AnimalsFactory 传递信息（男 / 女 / 未知的性别），以便获取它所需对象的颜色。
+###### Main，我的演示类使用 AnimalsFactory 来获取 Animals 对象。它将向 AnimalsFactory 传递信息（男 / 女 / 未知的性别），以便获取它所需对象的颜色。
 
 ![享元模式的 UML 图](https://github.com/wanwujiedao/pattern/blob/master/img/flyweight_pattern_uml_diagram.jpg)
 
