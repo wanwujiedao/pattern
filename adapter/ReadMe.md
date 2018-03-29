@@ -66,7 +66,7 @@
 
 ###### 我们想要让 Container 可以根据液体状态自动选择容器。为了实现这个功能，我们需要创建一个实现了 Container 接口的适配器类 ContainerAdapter，并使用 Assemble 对象来盛放不同状态的物品。
 
-###### ContainerImpl 使用适配器类 ContainerAdapter 传递所盛放物体的状态，不需要知道能盛放什么样状态的物体的实际类。Main，我们的演示类使用 ContainerImpl 类来盛放不同的物体。
+###### ContainerImpl 使用适配器类 ContainerAdapter 传递所盛放物体的状态，不需要知道能盛放什么样状态的物体的实际类。Main，我的演示类使用 ContainerImpl 类来盛放不同的物体。
 
 ![适配器模式的 UML 图](https://github.com/wanwujiedao/pattern/blob/master/img/adapter_pattern_uml_diagram.jpg)
 
