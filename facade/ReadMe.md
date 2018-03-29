@@ -63,9 +63,9 @@
 
 > 步骤 1：创建一个接口。
 
-```markdown
+**Animals.java**
 
-    **Animals.java**
+```markdown
     
     package com.dao.pattern.facade.interfaces;
     
@@ -96,10 +96,10 @@
 
 > 步骤 2：创建实现接口的实体类。
 
+ **Dog.java**
+ 
 ```markdown
-    
-    **Dog.java**
-    
+        
     package com.dao.pattern.facade.impl;
     
     import com.dao.pattern.facade.interfaces.Animals;
@@ -129,8 +129,11 @@
         }
     }
     
+```
     
-    **Cat.java**
+**Cat.java**
+
+```markdown
     
     package com.dao.pattern.facade.impl;
     
@@ -166,9 +169,9 @@
 
 > 步骤 3：创建一个外观类。
 
-```markdown
+**AnimalsFacade.java**
 
-    **AnimalsFacade.java**
+```markdown
 
     package com.dao.pattern.facade.core;
     
@@ -236,9 +239,9 @@
 
 > 步骤 4：使用该外观类获取不同动物的名称。
 
+**Main.java**
+ 
 ```markdown
-
-    **Main.java**
 
     package com.dao.pattern.facade.main;
     
