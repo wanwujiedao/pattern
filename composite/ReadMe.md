@@ -48,7 +48,7 @@
 
 ## 实现
 
-###### 我们有一个类 Biology，该类被当作组合模型类。Main，我们的演示类使用 Biology 类来添加生物圈层次结构，并打印生物圈信息。
+###### 我们有一个类 Biology，该类被当作组合模型类。Main，我的演示类使用 Biology 类来添加生物圈层次结构，并打印生物圈信息。
 ![组合模式的 UML 图](https://github.com/wanwujiedao/pattern/blob/master/img/composite_pattern_uml_diagram.jpg)
 
 > 步骤 1：创建 Biology 类，该类带有 Biology 对象的列表。
