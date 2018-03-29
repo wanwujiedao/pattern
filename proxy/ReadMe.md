@@ -82,11 +82,10 @@
 
 > 步骤 1：创建一个接口。
 
+**DataBase.java**
+
 ```markdown
-    
-    
-    **DataBase.java**
-    
+        
     package com.dao.pattern.proxy.interfaces;
     
     /**
@@ -115,9 +114,9 @@
 
 > 步骤 2：创建实现接口的实体类(包含代理类 ProxyDataBase 和被代理类 RealDataBase)。
 
+**RealDataBase.java**
+ 
 ```markdown
-
-   **RealDataBase.java**
 
    package com.dao.pattern.proxy.impl;
    
@@ -167,8 +166,11 @@
        }
    }
 
+```
     
-    **ProxyDatabase.java**
+ **ProxyDatabase.java**
+
+```markdown
 
    package com.dao.pattern.proxy.core;
    
@@ -228,14 +230,13 @@
        }
    }
 
-
 ```
 
 > 步骤 3：当被请求时，使用 ProxyDataBase 来获取 RealDataBase 类的对象。
 
-```markdown
+**Main.java**
 
-    **Main.java**
+```markdown
 
    package com.dao.pattern.proxy.main;
    
