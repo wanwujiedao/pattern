@@ -41,7 +41,7 @@ public class Main {
             game.setTime(new Timestamp(System.currentTimeMillis()));
             //因为吃饭，游戏保存
             if(i==5) {
-                System.out.println("=========【存储游戏："+sdf.format(game.getTime())+"】===========");
+                System.out.println("=========【吃饭时间到，存档游戏："+sdf.format(game.getTime())+"】===========");
                 mementoMaker.add(game.saveTimeToMemento());
             }
             System.out.println("#########【正在进行游戏："+sdf.format(game.getTime())+"】########");
@@ -50,7 +50,7 @@ public class Main {
         }
         //睡觉了，再次存档
         game.setTime(new Timestamp(System.currentTimeMillis()));
-        System.out.println("=========【存储游戏："+sdf.format(game.getTime())+"】===========");
+        System.out.println("=========【睡觉时间到，存档游戏："+sdf.format(game.getTime())+"】===========");
         mementoMaker.add(game.saveTimeToMemento());
 
         //第二天看看昨天的存档
@@ -58,7 +58,7 @@ public class Main {
         for(Memento memento:mementos){
             //从游戏读取存档
             game.getTimeFromMemento(memento);
-            System.out.println("备忘记录：【"+sdf.format(game.getTime())+"】");
+            System.out.println("存档记录：【"+sdf.format(game.getTime())+"】");
         }
     }
 }
