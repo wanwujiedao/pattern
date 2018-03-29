@@ -8,7 +8,7 @@
 
 ## 实现
 
-###### 我们将创建一个 Person 对象、Criteria 接口和实现了该接口的实体类，来过滤 Person 对象的列表。Main，我们的演示类使用 Criteria 对象，基于各种标准和它们的结合来过滤 Person 对象的列表。
+###### 我们将创建一个 Person 对象、Criteria 接口和实现了该接口的实体类，来过滤 Person 对象的列表。Main，我的演示类使用 Criteria 对象，基于各种标准和它们的结合来过滤 Person 对象的列表。
 
 ![过滤器模式的 UML 图](https://github.com/wanwujiedao/pattern/blob/master/img/filter_pattern_uml_diagram.jpg)
 
