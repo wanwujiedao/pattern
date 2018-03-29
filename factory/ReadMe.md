@@ -53,198 +53,207 @@
 ![工厂模式的 UML 图](https://github.com/wanwujiedao/pattern/blob/master/img/factory_pattern_uml_diagram.jpg)
 
 > 步骤 1：创建一个接口-液体。
-```markdown
+
 **Iliquid.java**
-package com.dao.pattern.factory.interfaces;
 
-/**
- * 液体
- *
- * @author 阿导
- * @version BUILD1001
- * @fileName com.dao.pattern.factory.interfaces.Iliquid.java
- * @CopyRright (c) 2018-万物皆导
- * @created 2018-01-30 15:12:00
- *
- */
-public interface Iliquid {
-
+```markdown
+    
+    package com.dao.pattern.factory.interfaces;
+    
     /**
-     * 味道
+     * 液体
      *
      * @author 阿导
-     * @time 2018/1/30
-     * @CopyRight 万物皆导
-     * @return void
+     * @version BUILD1001
+     * @fileName com.dao.pattern.factory.interfaces.Iliquid.java
+     * @CopyRright (c) 2018-万物皆导
+     * @created 2018-01-30 15:12:00
+     *
      */
-    void taste();
-}
+    public interface Iliquid {
+    
+        /**
+         * 味道
+         *
+         * @author 阿导
+         * @time 2018/1/30
+         * @CopyRight 万物皆导
+         * @return void
+         */
+        void taste();
+    }
 
 ```
 
 > 步骤 2：创建实现液体接口的实体类。
-```markdown
 
 **Gasoline.java**
 
-package com.dao.pattern.factory.impl;
-
-import com.dao.pattern.factory.interfaces.Iliquid;
-
-/**
- * 汽油
- *
- * @author 阿导
- * @version BUILD1001
- * @fileName com.dao.pattern.factory.impl.Gasoline.java
- * @CopyRright (c) 2018-万物皆导
- * @created 2018-01-30 15:20:00
- *
- */
-public class Gasoline implements Iliquid {
+```markdown
+    
+    package com.dao.pattern.factory.impl;
+    
+    import com.dao.pattern.factory.interfaces.Iliquid;
+    
     /**
-     * 汽油的味道
+     * 汽油
      *
      * @author 阿导
-     * @time 2018/1/30
-     * @CopyRight 万物皆导
-     * @return void
+     * @version BUILD1001
+     * @fileName com.dao.pattern.factory.impl.Gasoline.java
+     * @CopyRright (c) 2018-万物皆导
+     * @created 2018-01-30 15:20:00
+     *
      */
-    @Override
-    public void taste() {
-        System.out.println("汽油好呛人！！！");
+    public class Gasoline implements Iliquid {
+        /**
+         * 汽油的味道
+         *
+         * @author 阿导
+         * @time 2018/1/30
+         * @CopyRight 万物皆导
+         * @return void
+         */
+        @Override
+        public void taste() {
+            System.out.println("汽油好呛人！！！");
+        }
     }
-}
+
+```
 
 **Perfume.java**
 
-package com.dao.pattern.factory.impl;
-
-import com.dao.pattern.factory.interfaces.Iliquid;
-
-/**
- * 香水
- *
- * @author 阿导
- * @version BUILD1001
- * @fileName com.dao.pattern.factory.impl.Perfume.java
- * @CopyRright (c) 2018-万物皆导
- * @created 2018-01-30 15:21:00
- */
-public class Perfume implements Iliquid {
+```markdown
+    package com.dao.pattern.factory.impl;
+    
+    import com.dao.pattern.factory.interfaces.Iliquid;
+    
     /**
-     * 香水的味道
+     * 香水
      *
      * @author 阿导
-     * @time 2018/1/30
-     * @CopyRight 万物皆导
-     * @return void
+     * @version BUILD1001
+     * @fileName com.dao.pattern.factory.impl.Perfume.java
+     * @CopyRright (c) 2018-万物皆导
+     * @created 2018-01-30 15:21:00
      */
-    @Override
-    public void taste() {
-        System.out.println("这香水有毒。。。");
+    public class Perfume implements Iliquid {
+        /**
+         * 香水的味道
+         *
+         * @author 阿导
+         * @time 2018/1/30
+         * @CopyRight 万物皆导
+         * @return void
+         */
+        @Override
+        public void taste() {
+            System.out.println("这香水有毒。。。");
+        }
     }
-}
 
 
 ```
 
 > 步骤 3：创建一个工厂，生成基于给定信息的实体类的对象。
-```markdown
 
 **LiquidFactory.java**
-package com.dao.pattern.factory.core;
 
-/**
- * 液体的工厂类
- *
- * @author 阿导
- * @version BUILD1001
- * @fileName com.dao.pattern.factory.core.IliquidFactory.java
- * @CopyRright (c) 2018-万物皆导
- * @created 2018-01-30 15:27:00
- */
-public class LiquidFactory {
-
+```markdown
+    
+    package com.dao.pattern.factory.core;
+    
     /**
-     * 通过工厂模式获取某个液体
+     * 液体的工厂类
      *
      * @author 阿导
-     * @time 2018/1/30
-     * @CopyRight 万物皆导
-     * @param clazz
-     * @return T
+     * @version BUILD1001
+     * @fileName com.dao.pattern.factory.core.IliquidFactory.java
+     * @CopyRright (c) 2018-万物皆导
+     * @created 2018-01-30 15:27:00
      */
-    public static <T> T getClass(Class<? extends T> clazz) {
-
-        T obj = null;
-
-        try {
-            obj = (T) Class.forName(clazz.getName()).newInstance();
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        } catch (InstantiationException e) {
-            e.printStackTrace();
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
+    public class LiquidFactory {
+    
+        /**
+         * 通过工厂模式获取某个液体
+         *
+         * @author 阿导
+         * @time 2018/1/30
+         * @CopyRight 万物皆导
+         * @param clazz
+         * @return T
+         */
+        public static <T> T getClass(Class<? extends T> clazz) {
+    
+            T obj = null;
+    
+            try {
+                obj = (T) Class.forName(clazz.getName()).newInstance();
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            } catch (InstantiationException e) {
+                e.printStackTrace();
+            } catch (IllegalAccessException e) {
+                e.printStackTrace();
+            }
+    
+            return obj;
         }
-
-        return obj;
     }
-}
-
 
 ```
 
 > 步骤 4：使用该工厂，通过传递类型信息来获取实体类的对象。
-```markdown
 
 **Main.java**
-package com.dao.pattern.factory.mian;
 
-import com.dao.pattern.factory.core.LiquidFactory;
-import com.dao.pattern.factory.impl.Gasoline;
-import com.dao.pattern.factory.impl.Perfume;
-
-/**
- * 启动类
- *
- * @author 阿导
- * @version BUILD1001
- * @fileName com.dao.pattern.factory.mian.Main.java
- * @CopyRright (c) 2018-万物皆导
- * @created 2018-01-30 15:28:00
- */
-public class Main {
-
+```markdown
+    
+    package com.dao.pattern.factory.mian;
+    
+    import com.dao.pattern.factory.core.LiquidFactory;
+    import com.dao.pattern.factory.impl.Gasoline;
+    import com.dao.pattern.factory.impl.Perfume;
+    
     /**
-     * 主程序入口
+     * 启动类
      *
      * @author 阿导
-     * @time 2018/1/30
-     * @CopyRight 万物皆导
-     * @param args
-     * @return void
+     * @version BUILD1001
+     * @fileName com.dao.pattern.factory.mian.Main.java
+     * @CopyRright (c) 2018-万物皆导
+     * @created 2018-01-30 15:28:00
      */
-    public static void main(String[] args){
-        //汽油来了
-        Gasoline gasoline= LiquidFactory.getClass(Gasoline.class);
-        gasoline.taste();
-        //香水也跟上
-        Perfume perfume=LiquidFactory.getClass(Perfume.class);
-        perfume.taste();
+    public class Main {
+    
+        /**
+         * 主程序入口
+         *
+         * @author 阿导
+         * @time 2018/1/30
+         * @CopyRight 万物皆导
+         * @param args
+         * @return void
+         */
+        public static void main(String[] args){
+            //汽油来了
+            Gasoline gasoline= LiquidFactory.getClass(Gasoline.class);
+            gasoline.taste();
+            //香水也跟上
+            Perfume perfume=LiquidFactory.getClass(Perfume.class);
+            perfume.taste();
+        }
     }
-}
-
 
 ```
 
 > 步骤 5：验证输出。
+
 ```markdown
-
-汽油好呛人！！！
-这香水有毒。。。
-
+    
+    汽油好呛人！！！
+    这香水有毒。。。
 
 ```
 
