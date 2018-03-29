@@ -56,7 +56,7 @@
 
 ###### 我们将创建一个 Animals 接口和实现了 Animals 接口的实体类。下一步是定义一个外观类 AnimalsFacade。
 
-###### AnimalsFacade 类使用实体类来代表用户对这些类的调用。Main，我们的演示类使用 AnimalsFacade 类来显示结果。
+###### AnimalsFacade 类使用实体类来代表用户对这些类的调用。Main，我的演示类使用 AnimalsFacade 类来显示结果。
 
 ![外观模式的 UML 图](https://github.com/wanwujiedao/pattern/blob/master/img/facade_pattern_uml_diagram.jpg)
 
