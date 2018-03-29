@@ -49,7 +49,7 @@
 ## 实现
 ###### 我们将创建一个 Pen 接口和实现了 Pen 接口的实体类。然后我们创建一个实现了 Pen 接口的抽象装饰类 PenDecorator，并把 Pen 对象作为它的实例变量。
 ###### BlackPenDecorator 是实现了 PenDecorator 的实体类。
-###### Main，我们的演示类使用 PenDecorator 来装饰 Pen 对象。
+###### Main，我的演示类使用 PenDecorator 来装饰 Pen 对象。
 
 
 ![装饰器模式的 UML 图](https://github.com/wanwujiedao/pattern/blob/master/img/decorator_pattern_uml_diagram.jpg)
