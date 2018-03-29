@@ -56,9 +56,10 @@
 ![桥接模式的 UML 图](https://github.com/wanwujiedao/pattern/blob/master/img/bridge_pattern_uml_diagram.jpg)
 
 > 步骤 1：创建桥接实现接口。
-```markdown
 
-    **Voice.java**
+**Voice.java**
+
+```markdown
 
    package com.dao.pattern.bridge.interfaces;
    
@@ -91,9 +92,9 @@
 
 > 步骤 2：创建实现了 Voice 接口的实体桥接实现类。
 
-```markdown
+**VoiceManImpl.java**
 
-    **VoiceManImpl.java**
+```markdown
     
     package com.dao.pattern.bridge.impl;
     
@@ -125,9 +126,11 @@
         }
     }
 
-
+```
     
-    **VoiceWomanImpl.java**
+**VoiceWomanImpl.java**
+
+```markdown
 
    package com.dao.pattern.bridge.impl;
    
@@ -164,9 +167,9 @@
 
 > 步骤 3：使用 Voice 接口创建抽象类 Animals。
 
+**Animals.java**
+ 
 ```markdown
-
-    **Animals.java**
 
    package com.dao.pattern.bridge.core;
    
@@ -213,9 +216,9 @@
 
 > 步骤 4：创建实现了 Animals 接口的实体类。
 
-```markdown
+**Human.java**
 
-    **Human.java**
+```markdown
     
    package com.dao.pattern.bridge.core;
    
@@ -278,9 +281,9 @@
 
 > 步骤 5：使用 Animals 和 Voice 人发出声音。
 
+**Main.java**
+ 
 ```markdown
-
-    **Main.java**
 
     package com.dao.pattern.bridge.main;
     
