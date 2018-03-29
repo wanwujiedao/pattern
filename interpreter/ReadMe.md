@@ -62,9 +62,9 @@
 
 > 步骤 1：创建一个表达式接口。
 
-```markdown
+**Expression.java**
 
-    **Expression.java**
+```markdown
 
     package com.dao.pattern.interpreter.interfaces;
     
@@ -94,9 +94,9 @@
 
 > 步骤 2：创建实现了上述接口的实体类。
 
-```markdown
+**ExpressionImpl.java**
 
-    **ExpressionImpl.java**
+```markdown
     
     package com.dao.pattern.interpreter.impl;
     
@@ -154,9 +154,9 @@
 
 > 步骤 3： 逻辑运算规则实现
 
+**ContraryExpression.java**
+    
 ```markdown
-
-    **ContraryExpression.java**
     
     package com.dao.pattern.interpreter.core;
     
@@ -206,7 +206,11 @@
         }
     }
 
-    **AndExpression.java**
+```
+
+**AndExpression.java**
+
+```markdown
     
     package com.dao.pattern.interpreter.core;
     
@@ -261,8 +265,11 @@
         }
     }
     
+```
     
-    **OrExpression.java**
+**OrExpression.java**
+
+```markdown
     
     package com.dao.pattern.interpreter.core;
     
@@ -322,9 +329,9 @@
 
 > 步骤 4： ExpressionMaker 使用 Expression 类来创建规则，作为解释器生成器
 
-```markdown
+**ExpressionMaker.java**
 
-    **ExpressionMaker.java**
+```markdown
 
     package com.dao.pattern.interpreter.core;
     
@@ -392,9 +399,9 @@
 
 > 步骤 5：Main 是演示类，从 ExpressionMaker 获取解释器，并解析它们。
 
-```markdown
+**Main.java**
 
-    **Main.java**
+```markdown
     
     package com.dao.pattern.interpreter.main;
     
