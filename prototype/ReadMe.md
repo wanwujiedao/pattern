@@ -80,105 +80,105 @@
 
 > 步骤 1：创建一个实现了 Clonable 接口的抽象类。
 
-```markdown
-
 **Liquid.java**
 
-package com.dao.pattern.prototype.abstracts;
-
-/**
- * 液体：实现了 Clonable 接口的抽象类
- *
- * @author 阿导
- * @version BUILD1001
- * @fileName com.dao.pattern.prototype.abstracts.Liquid.java
- * @CopyRright (c) 2018-万物皆导
- * @created 2018-02-06 11:53:00
- * @modifier 阿导
- */
-public abstract class Liquid  implements Cloneable{
-
+```markdown
+    
+    package com.dao.pattern.prototype.abstracts;
+    
     /**
-     * id
-     */
-    private Long id;
-
-    /**
-     * 液体名称
-     */
-    protected String name;
-
-    /**
-     * 获取液体的 ID
+     * 液体：实现了 Clonable 接口的抽象类
      *
      * @author 阿导
-     * @time 2018/2/6
-     * @CopyRight 万物皆导
-     * @return java.lang.Long
+     * @version BUILD1001
+     * @fileName com.dao.pattern.prototype.abstracts.Liquid.java
+     * @CopyRright (c) 2018-万物皆导
+     * @created 2018-02-06 11:53:00
+     * @modifier 阿导
      */
-    public Long getId() {
-        return id;
-    }
-
-    /**
-     * 设置液体的 ID
-     *
-     * @author 阿导
-     * @time 2018/2/6
-     * @CopyRight 万物皆导
-     * @param id
-     * @return void
-     */
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    /**
-     * 液体的用处
-     *
-     * @author 阿导
-     * @time 2018/2/6
-     * @CopyRight 万物皆导
-     * @return void
-     */
-    public abstract void use();
-
-    /**
-     * 获取液体名称
-     *
-     * @author 阿导
-     * @time 2018/2/6
-     * @CopyRight 万物皆导
-     * @return java.lang.String
-     */
-    public String getName() {
-        return name;
-    }
-
-    /**
-     * 设置液体名称
-     *
-     * @author 阿导
-     * @time 2018/2/6
-     * @CopyRight 万物皆导
-     * @param name
-     * @return void
-     */
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    @Override
-    public Object clone() {
-        Object clone = null;
-        try {
-            clone = super.clone();
-        } catch (CloneNotSupportedException e) {
-            e.printStackTrace();
+    public abstract class Liquid  implements Cloneable{
+    
+        /**
+         * id
+         */
+        private Long id;
+    
+        /**
+         * 液体名称
+         */
+        protected String name;
+    
+        /**
+         * 获取液体的 ID
+         *
+         * @author 阿导
+         * @time 2018/2/6
+         * @CopyRight 万物皆导
+         * @return java.lang.Long
+         */
+        public Long getId() {
+            return id;
         }
-        return clone;
+    
+        /**
+         * 设置液体的 ID
+         *
+         * @author 阿导
+         * @time 2018/2/6
+         * @CopyRight 万物皆导
+         * @param id
+         * @return void
+         */
+        public void setId(Long id) {
+            this.id = id;
+        }
+    
+        /**
+         * 液体的用处
+         *
+         * @author 阿导
+         * @time 2018/2/6
+         * @CopyRight 万物皆导
+         * @return void
+         */
+        public abstract void use();
+    
+        /**
+         * 获取液体名称
+         *
+         * @author 阿导
+         * @time 2018/2/6
+         * @CopyRight 万物皆导
+         * @return java.lang.String
+         */
+        public String getName() {
+            return name;
+        }
+    
+        /**
+         * 设置液体名称
+         *
+         * @author 阿导
+         * @time 2018/2/6
+         * @CopyRight 万物皆导
+         * @param name
+         * @return void
+         */
+        public void setName(String name) {
+            this.name = name;
+        }
+    
+        @Override
+        public Object clone() {
+            Object clone = null;
+            try {
+                clone = super.clone();
+            } catch (CloneNotSupportedException e) {
+                e.printStackTrace();
+            }
+            return clone;
+        }
     }
-}
 
 
 ```
@@ -186,210 +186,210 @@ public abstract class Liquid  implements Cloneable{
 
 > 步骤 2：创建扩展了上面抽象类的实体类。
 
-```markdown
-
 **Gasoline.java**
 
-package com.dao.pattern.prototype.extend;
-
-
-import com.dao.pattern.prototype.abstracts.Liquid;
-
-/**
- * 汽油
- *
- * @author 阿导
- * @version BUILD1001
- * @fileName com.dao.pattern.factory.impl.Gasoline.java
- * @CopyRright (c) 2018-万物皆导
- * @created 2018-01-30 15:20:00
- *
- */
-public class Gasoline extends Liquid {
-
+```markdown
+    
+    package com.dao.pattern.prototype.extend;
+    
+    
+    import com.dao.pattern.prototype.abstracts.Liquid;
+    
     /**
-     * 汽油的构造方法
+     * 汽油
      *
      * @author 阿导
-     * @time 2018/2/6
-     * @CopyRight 万物皆导
-     * @return
-     */
-    public Gasoline() {
-        name="汽油";
-    }
-
-    /**
-     * 汽油的用处
+     * @version BUILD1001
+     * @fileName com.dao.pattern.factory.impl.Gasoline.java
+     * @CopyRright (c) 2018-万物皆导
+     * @created 2018-01-30 15:20:00
      *
-     * @author 阿导
-     * @time 2018/2/6
-     * @CopyRight 万物皆导
-     * @return void
      */
-    @Override
-    public void use() {
-        System.out.println("汽油好呛人！！！");
+    public class Gasoline extends Liquid {
+    
+        /**
+         * 汽油的构造方法
+         *
+         * @author 阿导
+         * @time 2018/2/6
+         * @CopyRight 万物皆导
+         * @return
+         */
+        public Gasoline() {
+            name="汽油";
+        }
+    
+        /**
+         * 汽油的用处
+         *
+         * @author 阿导
+         * @time 2018/2/6
+         * @CopyRight 万物皆导
+         * @return void
+         */
+        @Override
+        public void use() {
+            System.out.println("汽油好呛人！！！");
+        }
     }
-}
 
+```
 
 **Perfume.java**
 
-package com.dao.pattern.prototype.extend;
-
-import com.dao.pattern.prototype.abstracts.Liquid;
-
-/**
- * 香水
- *
- * @author 阿导
- * @version BUILD1001
- * @fileName com.dao.pattern.factory.impl.Perfume.java
- * @CopyRright (c) 2018-万物皆导
- * @created 2018-01-30 15:21:00
- */
-public class Perfume extends Liquid {
-
+```markdown
+    
+    package com.dao.pattern.prototype.extend;
+    
+    import com.dao.pattern.prototype.abstracts.Liquid;
+    
     /**
-     * 香水的构造方法
-     * @author 阿导
-     * @time 2018/2/6
-     * @CopyRight 万物皆导
-     * @return
-     */
-    public Perfume() {
-        name="香水";
-    }
-
-    /**
-     * 香水的用处
+     * 香水
      *
      * @author 阿导
-     * @time 2018/2/6
-     * @CopyRight 万物皆导
-     * @return void
+     * @version BUILD1001
+     * @fileName com.dao.pattern.factory.impl.Perfume.java
+     * @CopyRright (c) 2018-万物皆导
+     * @created 2018-01-30 15:21:00
      */
-    @Override
-    public void use() {
-        System.out.println("这香水有毒。。。");
+    public class Perfume extends Liquid {
+    
+        /**
+         * 香水的构造方法
+         * @author 阿导
+         * @time 2018/2/6
+         * @CopyRight 万物皆导
+         * @return
+         */
+        public Perfume() {
+            name="香水";
+        }
+    
+        /**
+         * 香水的用处
+         *
+         * @author 阿导
+         * @time 2018/2/6
+         * @CopyRight 万物皆导
+         * @return void
+         */
+        @Override
+        public void use() {
+            System.out.println("这香水有毒。。。");
+        }
     }
-}
-
 
 ```
 
 > 步骤 3：创建一个类，模拟从数据库获取液体实体类，并把它们存储在一个 Hashtable 中。
 
-```markdown
-
 **LiquidCache.java**
 
-package com.dao.pattern.prototype.core;
-
-import com.dao.pattern.prototype.abstracts.Liquid;
-import com.dao.pattern.prototype.extend.Gasoline;
-import com.dao.pattern.prototype.extend.Perfume;
-
-import java.util.Hashtable;
-
-/**
- * 模拟从数据库获取数据
- *
- * @author 阿导
- * @version BUILD1001
- * @fileName com.dao.pattern.prototype.core.LiquidCache.java
- * @CopyRright (c) 2018-万物皆导
- * @created 2018-02-06 11:53:00
- * @modifier 阿导
- */
-public class LiquidCache {
-
+```markdown
+    
+    package com.dao.pattern.prototype.core;
+    
+    import com.dao.pattern.prototype.abstracts.Liquid;
+    import com.dao.pattern.prototype.extend.Gasoline;
+    import com.dao.pattern.prototype.extend.Perfume;
+    
+    import java.util.Hashtable;
+    
     /**
-     * 声明一个 map 存储液体信息
-     */
-    private static Hashtable<Long, Liquid> liquidMap = new Hashtable<Long, Liquid>();
-
-    /**
-     * 通过 ID 获取对应的液体
+     * 模拟从数据库获取数据
      *
      * @author 阿导
-     * @time 2018/2/6
-     * @CopyRight 万物皆导
-     * @param id
-     * @return com.dao.pattern.prototype.abstracts.Liquid
+     * @version BUILD1001
+     * @fileName com.dao.pattern.prototype.core.LiquidCache.java
+     * @CopyRright (c) 2018-万物皆导
+     * @created 2018-02-06 11:53:00
+     * @modifier 阿导
      */
-    public static Liquid getLiquid(Long id) {
-        Liquid cachedShape = liquidMap.get(id);
-        return (Liquid) cachedShape.clone();
+    public class LiquidCache {
+    
+        /**
+         * 声明一个 map 存储液体信息
+         */
+        private static Hashtable<Long, Liquid> liquidMap = new Hashtable<Long, Liquid>();
+    
+        /**
+         * 通过 ID 获取对应的液体
+         *
+         * @author 阿导
+         * @time 2018/2/6
+         * @CopyRight 万物皆导
+         * @param id
+         * @return com.dao.pattern.prototype.abstracts.Liquid
+         */
+        public static Liquid getLiquid(Long id) {
+            Liquid cachedShape = liquidMap.get(id);
+            return (Liquid) cachedShape.clone();
+        }
+    
+        /**
+         * 假设这里是从数据库获取的数据
+         *
+         * @author 阿导
+         * @time 2018/2/6
+         * @CopyRight 万物皆导
+         * @param
+         * @return void
+         */
+        public static void loadCache() {
+            Gasoline gasoline = new Gasoline();
+            gasoline.setId(1L);
+            liquidMap.put(gasoline.getId(), gasoline);
+    
+            Perfume perfume = new Perfume();
+            perfume.setId(2L);
+            liquidMap.put(perfume.getId(), perfume);
+    
+        }
     }
-
-    /**
-     * 假设这里是从数据库获取的数据
-     *
-     * @author 阿导
-     * @time 2018/2/6
-     * @CopyRight 万物皆导
-     * @param
-     * @return void
-     */
-    public static void loadCache() {
-        Gasoline gasoline = new Gasoline();
-        gasoline.setId(1L);
-        liquidMap.put(gasoline.getId(), gasoline);
-
-        Perfume perfume = new Perfume();
-        perfume.setId(2L);
-        liquidMap.put(perfume.getId(), perfume);
-
-    }
-}
-
 
 ```
 
 
 > 步骤 4：Main 是我的启动类， 使用 LiquidCache 类来获取存储在 Hashtable 中的形状的克隆。
 
-```markdown
-
 **Main.java**
 
-package com.dao.pattern.prototype.main;
-
-import com.dao.pattern.prototype.abstracts.Liquid;
-import com.dao.pattern.prototype.core.LiquidCache;
-
-/**
- * 启动类
- *
- * @author 阿导
- * @version BUILD1001
- * @fileName com.dao.pattern.prototype.main.Main.java
- * @CopyRright (c) 2018-万物皆导
- * @created 2018-02-06 12:58:00
- * @modifier 阿导
- * @updated 2018-02-06 12:58:00
- */
-public class Main {
-
-    public static void main(String[] args) {
-        //获取液体数据
-        LiquidCache.loadCache();
-
-        Liquid gasoline = LiquidCache.getLiquid(1L);
-        System.out.println("液体名称 : " + gasoline.getName());
-        gasoline.use();
-        System.out.println("========================");
-        Liquid perfume = LiquidCache.getLiquid(1L);
-        System.out.println("液体名称 : " + perfume.getName());
-        perfume.use();
-
-
-
+```markdown
+    
+    package com.dao.pattern.prototype.main;
+    
+    import com.dao.pattern.prototype.abstracts.Liquid;
+    import com.dao.pattern.prototype.core.LiquidCache;
+    
+    /**
+     * 启动类
+     *
+     * @author 阿导
+     * @version BUILD1001
+     * @fileName com.dao.pattern.prototype.main.Main.java
+     * @CopyRright (c) 2018-万物皆导
+     * @created 2018-02-06 12:58:00
+     * @modifier 阿导
+     * @updated 2018-02-06 12:58:00
+     */
+    public class Main {
+    
+        public static void main(String[] args) {
+            //获取液体数据
+            LiquidCache.loadCache();
+    
+            Liquid gasoline = LiquidCache.getLiquid(1L);
+            System.out.println("液体名称 : " + gasoline.getName());
+            gasoline.use();
+            System.out.println("========================");
+            Liquid perfume = LiquidCache.getLiquid(1L);
+            System.out.println("液体名称 : " + perfume.getName());
+            perfume.use();
+    
+    
+    
+        }
     }
-}
-
 
 ```
 
