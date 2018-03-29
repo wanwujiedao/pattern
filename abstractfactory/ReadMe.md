@@ -44,103 +44,109 @@
 
 
 > 步骤 1：为用处创建一个接口。
-```markdown
 
 **IUse.java**
 
-package com.dao.pattern.abstractfactory.interfaces;
+```markdown
 
-/**
- * 用处
- *
- * @author 阿导
- * @version BUILD1001
- * @fileName com.dao.pattern.abstractfactory.interfaces.IUse.java
- * @CopyRright (c) 2018-万物皆导
- * @created 2018-01-30 15:41:00
- */
-public interface IUse {
+    package com.dao.pattern.abstractfactory.interfaces;
+    
     /**
      * 用处
      *
      * @author 阿导
-     * @time 2018/1/30
-     * @CopyRight 万物皆导
-     * @return void
+     * @version BUILD1001
+     * @fileName com.dao.pattern.abstractfactory.interfaces.IUse.java
+     * @CopyRright (c) 2018-万物皆导
+     * @created 2018-01-30 15:41:00
      */
-    void use();
-}
+    public interface IUse {
+        /**
+         * 用处
+         *
+         * @author 阿导
+         * @time 2018/1/30
+         * @CopyRight 万物皆导
+         * @return void
+         */
+        void use();
+    }
 
 ```
 
 > 步骤 2：创建实现用处接口的实体类。
-```markdown
 
 **GasolineUse.java**
 
-package com.dao.pattern.abstractfactory.iml;
-
-import com.dao.pattern.abstractfactory.interfaces.IUse;
-
-/**
- * 汽油的用处
- *
- * @author 阿导
- * @version BUILD1001
- * @fileName com.dao.pattern.abstractfactory.iml.GasolineUse.java
- * @CopyRright (c) 2018-万物皆导
- * @created 2018-01-30 15:48:00
- * @modifier 阿导
- * @updated 2018-01-30 15:48:00
- */
-public class GasolineUse implements IUse {
+```markdown
+    
+    package com.dao.pattern.abstractfactory.iml;
+    
+    import com.dao.pattern.abstractfactory.interfaces.IUse;
+    
     /**
-     * 汽油的使用
+     * 汽油的用处
      *
      * @author 阿导
-     * @time 2018/1/30
-     * @CopyRight 万物皆导
-     * @return void
+     * @version BUILD1001
+     * @fileName com.dao.pattern.abstractfactory.iml.GasolineUse.java
+     * @CopyRright (c) 2018-万物皆导
+     * @created 2018-01-30 15:48:00
+     * @modifier 阿导
+     * @updated 2018-01-30 15:48:00
      */
-    @Override
-    public void use() {
-        System.out.println("汽油可以做燃料额！");
+    public class GasolineUse implements IUse {
+        /**
+         * 汽油的使用
+         *
+         * @author 阿导
+         * @time 2018/1/30
+         * @CopyRight 万物皆导
+         * @return void
+         */
+        @Override
+        public void use() {
+            System.out.println("汽油可以做燃料额！");
+        }
     }
-}
+
+```
 
 
 **PerfumeUse.java**
 
-package com.dao.pattern.abstractfactory.iml;
+```markdown
 
-import com.dao.pattern.abstractfactory.interfaces.IUse;
-
-/**
- * 香水的用处
- *
- * @author 阿导
- * @version BUILD1001
- * @fileName com.dao.pattern.abstractfactory.iml.PerfumeUse.java
- * @CopyRright (c) 2018-万物皆导
- * @created 2018-01-30 15:50:00
- * @modifier 阿导
- * @updated 2018-01-30 15:50:00
- */
-public class PerfumeUse implements IUse{
+    
+    package com.dao.pattern.abstractfactory.iml;
+    
+    import com.dao.pattern.abstractfactory.interfaces.IUse;
+    
     /**
      * 香水的用处
      *
      * @author 阿导
-     * @time 2018/1/30
-     * @CopyRight 万物皆导
-     * @return void
+     * @version BUILD1001
+     * @fileName com.dao.pattern.abstractfactory.iml.PerfumeUse.java
+     * @CopyRright (c) 2018-万物皆导
+     * @created 2018-01-30 15:50:00
+     * @modifier 阿导
+     * @updated 2018-01-30 15:50:00
      */
-    @Override
-    public void use() {
-        System.out.println("装扮于身更加迷人");
+    public class PerfumeUse implements IUse{
+        /**
+         * 香水的用处
+         *
+         * @author 阿导
+         * @time 2018/1/30
+         * @CopyRight 万物皆导
+         * @return void
+         */
+        @Override
+        public void use() {
+            System.out.println("装扮于身更加迷人");
+        }
     }
-}
-
 
 ```
 
@@ -149,274 +155,283 @@ public class PerfumeUse implements IUse{
 > 步骤4：创建实现液体接口的实体类【使用工厂模式里面的 Gasoline.java，Perfume.java】。
 
 > 步骤 5：为 液体 和 用处 对象创建抽象类来获取工厂。
-```markdown
 
 **AbstractFactory.java**
 
-package com.dao.pattern.abstractfactory.core;
-
-import com.dao.pattern.abstractfactory.interfaces.IUse;
-import com.dao.pattern.factory.interfaces.Iliquid;
-
-/**
- * 抽象工厂类
- *
- * @author 阿导
- * @version BUILD1001
- * @fileName com.dao.pattern.abstractfactory.core.AbstractFactory.java
- * @CopyRright (c) 2018-万物皆导
- * @created 2018-01-30 15:54:00
- */
-public abstract class AbstractFactory {
+```markdown    
+    
+    package com.dao.pattern.abstractfactory.core;
+    
+    import com.dao.pattern.abstractfactory.interfaces.IUse;
+    import com.dao.pattern.factory.interfaces.Iliquid;
+    
     /**
-     * 液体工厂类
+     * 抽象工厂类
      *
      * @author 阿导
-     * @time 2018/1/30
-     * @CopyRight 万物皆导
-     * @param clazz
-     * @return com.dao.pattern.factory.interfaces.Iliquid
+     * @version BUILD1001
+     * @fileName com.dao.pattern.abstractfactory.core.AbstractFactory.java
+     * @CopyRright (c) 2018-万物皆导
+     * @created 2018-01-30 15:54:00
      */
-    public abstract <T> Iliquid getLiquid(Class<? extends T> clazz);
-
-    /**
-     * 用处工厂
-     *
-     * @author 阿导
-     * @time 2018/1/30
-     * @CopyRight 万物皆导
-     * @param clazz
-     * @return com.dao.pattern.abstractfactory.interfaces.IUse
-     */
-    public abstract <T> IUse getUse(Class<? extends T> clazz);
-}
+    public abstract class AbstractFactory {
+        /**
+         * 液体工厂类
+         *
+         * @author 阿导
+         * @time 2018/1/30
+         * @CopyRight 万物皆导
+         * @param clazz
+         * @return com.dao.pattern.factory.interfaces.Iliquid
+         */
+        public abstract <T> Iliquid getLiquid(Class<? extends T> clazz);
+    
+        /**
+         * 用处工厂
+         *
+         * @author 阿导
+         * @time 2018/1/30
+         * @CopyRight 万物皆导
+         * @param clazz
+         * @return com.dao.pattern.abstractfactory.interfaces.IUse
+         */
+        public abstract <T> IUse getUse(Class<? extends T> clazz);
+    }
 
 
 ```
 
 > 步骤 6：创建扩展了 AbstractFactory 的工厂类，基于给定的信息生成实体类的对象。
-```markdown
 
 **UseFactory.java**
 
-package com.dao.pattern.abstractfactory.core;
-
-import com.dao.pattern.abstractfactory.interfaces.IUse;
-import com.dao.pattern.factory.interfaces.Iliquid;
-
-/**
- * 用处的工厂类
- *
- * @author 阿导
- * @version BUILD1001
- * @fileName com.dao.pattern.abstractfactory.core.UseFactory.java
- * @CopyRright (c) 2018-万物皆导
- * @created 2018-01-30 16:03:00
- * @modifier 阿导
- * @updated 2018-01-30 16:03:00
- */
-public class UseFactory extends AbstractFactory {
-
-
+```markdown
+    
+    package com.dao.pattern.abstractfactory.core;
+    
+    import com.dao.pattern.abstractfactory.interfaces.IUse;
+    import com.dao.pattern.factory.interfaces.Iliquid;
+    
     /**
-     * 液体工厂类
+     * 用处的工厂类
      *
      * @author 阿导
-     * @time 2018/1/30
-     * @CopyRight 万物皆导
-     * @param clazz
-     * @return com.dao.pattern.factory.interfaces.Iliquid
+     * @version BUILD1001
+     * @fileName com.dao.pattern.abstractfactory.core.UseFactory.java
+     * @CopyRright (c) 2018-万物皆导
+     * @created 2018-01-30 16:03:00
+     * @modifier 阿导
+     * @updated 2018-01-30 16:03:00
      */
-    @Override
-    public <T> Iliquid getLiquid(Class<? extends T> clazz) {
-
-        return null;
-    }
-
-    /**
-     * 用处工厂
-     *
-     * @author 阿导
-     * @time 2018/1/30
-     * @CopyRight 万物皆导
-     * @param clazz
-     * @return com.dao.pattern.abstractfactory.interfaces.IUse
-     */
-    @Override
-    public <T> IUse getUse(Class<? extends T> clazz) {
-        IUse obj = null;
-
-        try {
-            obj = (IUse) Class.forName(clazz.getName()).newInstance();
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        } catch (InstantiationException e) {
-            e.printStackTrace();
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
+    public class UseFactory extends AbstractFactory {
+    
+    
+        /**
+         * 液体工厂类
+         *
+         * @author 阿导
+         * @time 2018/1/30
+         * @CopyRight 万物皆导
+         * @param clazz
+         * @return com.dao.pattern.factory.interfaces.Iliquid
+         */
+        @Override
+        public <T> Iliquid getLiquid(Class<? extends T> clazz) {
+    
+            return null;
         }
-
-        return obj;
+    
+        /**
+         * 用处工厂
+         *
+         * @author 阿导
+         * @time 2018/1/30
+         * @CopyRight 万物皆导
+         * @param clazz
+         * @return com.dao.pattern.abstractfactory.interfaces.IUse
+         */
+        @Override
+        public <T> IUse getUse(Class<? extends T> clazz) {
+            IUse obj = null;
+    
+            try {
+                obj = (IUse) Class.forName(clazz.getName()).newInstance();
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            } catch (InstantiationException e) {
+                e.printStackTrace();
+            } catch (IllegalAccessException e) {
+                e.printStackTrace();
+            }
+    
+            return obj;
+        }
     }
-}
 
+```
 
 **LiquidFactory.java**
 
-package com.dao.pattern.abstractfactory.core;
-
-import com.dao.pattern.abstractfactory.interfaces.IUse;
-import com.dao.pattern.factory.interfaces.Iliquid;
-
-/**
- * 液体的工厂类
- *
- * @author 阿导
- * @version BUILD1001
- * @fileName com.dao.pattern.abstractfactory.core.LiquidFactory.java
- * @CopyRright (c) 2018-万物皆导
- * @created 2018-01-30 16:03:00
- * @modifier 阿导
- * @updated 2018-01-30 16:03:00
- */
-public class LiquidFactory extends AbstractFactory {
-
+```markdown
+    
+    package com.dao.pattern.abstractfactory.core;
+    
+    import com.dao.pattern.abstractfactory.interfaces.IUse;
+    import com.dao.pattern.factory.interfaces.Iliquid;
+    
     /**
-     * 液体工厂类
+     * 液体的工厂类
      *
      * @author 阿导
-     * @time 2018/1/30
-     * @CopyRight 万物皆导
-     * @param clazz
-     * @return com.dao.pattern.factory.interfaces.Iliquid
+     * @version BUILD1001
+     * @fileName com.dao.pattern.abstractfactory.core.LiquidFactory.java
+     * @CopyRright (c) 2018-万物皆导
+     * @created 2018-01-30 16:03:00
+     * @modifier 阿导
+     * @updated 2018-01-30 16:03:00
      */
-    @Override
-    public <T> Iliquid getLiquid(Class<? extends T> clazz) {
-
-        Iliquid obj = null;
-
-        try {
-            obj = (Iliquid) Class.forName(clazz.getName()).newInstance();
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        } catch (InstantiationException e) {
-            e.printStackTrace();
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
+    public class LiquidFactory extends AbstractFactory {
+    
+        /**
+         * 液体工厂类
+         *
+         * @author 阿导
+         * @time 2018/1/30
+         * @CopyRight 万物皆导
+         * @param clazz
+         * @return com.dao.pattern.factory.interfaces.Iliquid
+         */
+        @Override
+        public <T> Iliquid getLiquid(Class<? extends T> clazz) {
+    
+            Iliquid obj = null;
+    
+            try {
+                obj = (Iliquid) Class.forName(clazz.getName()).newInstance();
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            } catch (InstantiationException e) {
+                e.printStackTrace();
+            } catch (IllegalAccessException e) {
+                e.printStackTrace();
+            }
+    
+            return obj;
         }
-
-        return obj;
+    
+        /**
+         * 用处工厂
+         *
+         * @author 阿导
+         * @time 2018/1/30
+         * @CopyRight 万物皆导
+         * @param clazz
+         * @return com.dao.pattern.abstractfactory.interfaces.IUse
+         */
+        @Override
+        public <T> IUse getUse(Class<? extends T> clazz) {
+            return null;
+        }
     }
-
-    /**
-     * 用处工厂
-     *
-     * @author 阿导
-     * @time 2018/1/30
-     * @CopyRight 万物皆导
-     * @param clazz
-     * @return com.dao.pattern.abstractfactory.interfaces.IUse
-     */
-    @Override
-    public <T> IUse getUse(Class<? extends T> clazz) {
-        return null;
-    }
-}
 
 
 ```
 
 > 步骤 7：创建一个工厂创造器/生成器类，通过传递液体或用处信息来获取工厂。
-```markdown
 
 **FactoryProducer.java**
-package com.dao.pattern.abstractfactory.core;
-/**
- * 工厂创造器，构造器
- *
- * @author 阿导
- * @version BUILD1001
- * @fileName com.dao.pattern.abstractfactory.core.FactoryProducer.java
- * @CopyRright (c) 2018-万物皆导
- * @created 2018-01-30 16:20:00
- * @modifier 阿导
- * @updated 2018-01-30 16:20:00
- */
-public class FactoryProducer {
-   public static final String LIQUID="LIQUID";
-   public static final String USE="USE";
-   public static AbstractFactory getFactory(String choice){
-      if(choice.equalsIgnoreCase(LIQUID)){
-         return new LiquidFactory();
-      } else if(choice.equalsIgnoreCase(USE)){
-         return new UseFactory();
-      }
-      return null;
-   }
-}
 
+```markdown
+    
+    package com.dao.pattern.abstractfactory.core;
+    /**
+     * 工厂创造器，构造器
+     *
+     * @author 阿导
+     * @version BUILD1001
+     * @fileName com.dao.pattern.abstractfactory.core.FactoryProducer.java
+     * @CopyRright (c) 2018-万物皆导
+     * @created 2018-01-30 16:20:00
+     * @modifier 阿导
+     * @updated 2018-01-30 16:20:00
+     */
+    public class FactoryProducer {
+       public static final String LIQUID="LIQUID";
+       public static final String USE="USE";
+       public static AbstractFactory getFactory(String choice){
+          if(choice.equalsIgnoreCase(LIQUID)){
+             return new LiquidFactory();
+          } else if(choice.equalsIgnoreCase(USE)){
+             return new UseFactory();
+          }
+          return null;
+       }
+    }
 
 ```
 
 
 > 步骤 8：使用 FactoryProducer 来获取 AbstractFactory，通过传递类型信息来获取实体类的对象。
-```markdown
 
 **Main.java**
-package com.dao.pattern.abstractfactory.main;
 
-import com.dao.pattern.abstractfactory.core.AbstractFactory;
-import com.dao.pattern.abstractfactory.core.FactoryProducer;
-import com.dao.pattern.abstractfactory.impl.GasolineUse;
-import com.dao.pattern.abstractfactory.impl.PerfumeUse;
-import com.dao.pattern.factory.impl.Gasoline;
-import com.dao.pattern.factory.impl.Perfume;
-
-/**
- * 启动类
- *
- * @author 阿导
- * @version BUILD1001
- * @fileName com.dao.pattern.abstractfactory.main.Main.java
- * @CopyRright (c) 2018-万物皆导
- * @created 2018-01-30 16:20:00
- * @modifier 阿导
- * @updated 2018-01-30 16:20:00
- */
-public class Main {
+```markdown
+    
+    package com.dao.pattern.abstractfactory.main;
+    
+    import com.dao.pattern.abstractfactory.core.AbstractFactory;
+    import com.dao.pattern.abstractfactory.core.FactoryProducer;
+    import com.dao.pattern.abstractfactory.impl.GasolineUse;
+    import com.dao.pattern.abstractfactory.impl.PerfumeUse;
+    import com.dao.pattern.factory.impl.Gasoline;
+    import com.dao.pattern.factory.impl.Perfume;
+    
     /**
-     * 主程序入口
+     * 启动类
      *
      * @author 阿导
-     * @time 2018/1/30
-     * @CopyRight 万物皆导
-     * @param args
-     * @return void
+     * @version BUILD1001
+     * @fileName com.dao.pattern.abstractfactory.main.Main.java
+     * @CopyRright (c) 2018-万物皆导
+     * @created 2018-01-30 16:20:00
+     * @modifier 阿导
+     * @updated 2018-01-30 16:20:00
      */
-    public static void main(String[] args){
-        //液体啊
-        AbstractFactory liquid = FactoryProducer.getFactory(FactoryProducer.LIQUID);
-        //汽油
-        liquid.getLiquid(Gasoline.class).taste();
-        //香水
-        liquid.getLiquid(Perfume.class).taste();
-        //用处啊
-        AbstractFactory use = FactoryProducer.getFactory(FactoryProducer.USE);
-        //汽油的用处
-        use.getUse(GasolineUse.class).use();
-        //香水的用处
-        use.getUse(PerfumeUse.class).use();
+    public class Main {
+        /**
+         * 主程序入口
+         *
+         * @author 阿导
+         * @time 2018/1/30
+         * @CopyRight 万物皆导
+         * @param args
+         * @return void
+         */
+        public static void main(String[] args){
+            //液体啊
+            AbstractFactory liquid = FactoryProducer.getFactory(FactoryProducer.LIQUID);
+            //汽油
+            liquid.getLiquid(Gasoline.class).taste();
+            //香水
+            liquid.getLiquid(Perfume.class).taste();
+            //用处啊
+            AbstractFactory use = FactoryProducer.getFactory(FactoryProducer.USE);
+            //汽油的用处
+            use.getUse(GasolineUse.class).use();
+            //香水的用处
+            use.getUse(PerfumeUse.class).use();
+        }
     }
-}
 
 ```
 
 > 步骤 9：验证输出。
-```markdown
 
-汽油好呛人！！！
-这香水有毒。。。
-汽油可以做燃料额！
-装扮于身更加迷人
+```markdown
+    
+    汽油好呛人！！！
+    这香水有毒。。。
+    汽油可以做燃料额！
+    装扮于身更加迷人
 
 ```
