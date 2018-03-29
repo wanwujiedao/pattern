@@ -55,10 +55,10 @@
 
 > 步骤 1：创建一个命令接口。
 
+**Order.java**
+
 ```markdown
 
-    **Order.java**
-    
     package com.dao.pattern.command.interfaces;
     
     /**
@@ -87,9 +87,9 @@
 
 > 步骤 2：创建一个请求类。
 
-```markdown
+**DataBase.java**
 
-    **DataBase.java**
+```markdown
     
     package com.dao.pattern.command.vo;
     
@@ -140,9 +140,9 @@
 
 > 步骤 3：创建实现了 Order 接口的实体类。
 
-```markdown
+**InsertOperation.java**
 
-    **InsertOperation.java**
+```markdown
 
     package com.dao.pattern.command.impl;
     
@@ -196,8 +196,12 @@
             this.dataBase.insert(this.name);
         }
     }
+
+```
     
-    **QueryOperation.java**
+**QueryOperation.java**
+
+```markdown
     
     package com.dao.pattern.command.impl;
     
@@ -248,9 +252,10 @@
 ```
 
 > 步骤 4：创建命令调用类。
-```markdown
 
-    **Broker.java**
+**Broker.java**
+
+```markdown
     
     package com.dao.pattern.command.core;
     
@@ -307,9 +312,9 @@
 
 > 步骤 5：使用 Broker 类来接受并执行命令。
 
-```markdown
+**Main.java**
 
-    **Main.java**
+```markdown
 
     package com.dao.pattern.command.main;
     
