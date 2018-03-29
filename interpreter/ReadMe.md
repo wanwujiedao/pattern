@@ -55,7 +55,7 @@
 
 ###### 我们将创建一个接口 Expression 和实现了 Expression 接口的实体类。定义作为上下文中主要解释器的 ExpressionImpl 类。其他的类 OrExpression、AndExpression 、ContraryExpression 用于创建逻辑运算表达式。
 
-###### Main，我们的演示类使用 Expression 类创建规则和演示表达式的解析。
+###### Main，我的演示类使用 Expression 类创建规则和演示表达式的解析。
 
 ![解释器模式的 UML 图](https://github.com/wanwujiedao/pattern/blob/master/img/interpreter_pattern_uml_diagram.jpg)
 
