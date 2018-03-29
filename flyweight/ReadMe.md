@@ -66,9 +66,9 @@
 
 > 步骤 1：创建一个接口。
 
-```markdown
+**Animals.java**
 
-    **Animals.java**
+```markdown
  
     package com.dao.pattern.flyweight.interfaces;
     
@@ -99,10 +99,10 @@
 
 > 步骤 2：创建实现接口的实体类。
 
+**Human.java**
+
 ```markdown
-    
-    **Human.java**
-    
+        
     package com.dao.pattern.flyweight.impl;
     
     import com.dao.pattern.flyweight.interfaces.Animals;
@@ -171,9 +171,9 @@
 
 > 步骤 3：创建一个工厂，生成基于给定信息的实体类的对象。
 
-```markdown
+**AnimalsFactory.java**
 
-    **AnimalsFactory.java**
+```markdown
     
     package com.dao.pattern.flyweight.core;
     
@@ -214,10 +214,10 @@
 
 > 步骤 4：使用该工厂，通过传递颜色信息来获取实体类的对象。
 
+**Main.java**
+
 ```markdown
-    
-    **Main.java**
-    
+        
     package com.dao.pattern.flyweight.main;
     
     import com.dao.pattern.flyweight.core.AnimalsFactory;
