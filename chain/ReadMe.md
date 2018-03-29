@@ -66,10 +66,10 @@
 
 > 步骤 1：创建抽象的记录器类。
 
+**AbstractPrice.java**
+ 
 ```markdown
-    
-    **AbstractPrice.java**
-    
+        
     package com.dao.pattern.chain.abstracts;
     
     /**
@@ -158,11 +158,12 @@
     }
 
 ```
+
 > 步骤 2：创建扩展了该记录器类的实体类。
 
+**Expensive.java**
+ 
 ```markdown
-
-    **Expensive.java**
 
     package com.dao.pattern.chain.buy;
     
@@ -207,9 +208,12 @@
         }
     }
 
+```
     
-    **Secondary.java**
-    
+**Secondary.java**
+
+```markdown    
+
     package com.dao.pattern.chain.buy;
     
     import com.dao.pattern.chain.abstracts.AbstractPrice;
@@ -253,8 +257,11 @@
         }
     }
 
+```
 
-    **Cheap.java**
+**Cheap.java**
+
+```markdown
 
     package com.dao.pattern.chain.buy;
     
@@ -303,9 +310,9 @@
 ```
 > 步骤 3：创建不同类型的记录器。赋予它们不同的错误级别，并在每个记录器中设置下一个记录器。每个记录器中的下一个记录器代表的是链的一部分。
 
+**ChainMaker.java**
+ 
 ```markdown
-
-    **ChainMaker.java**
     
     package com.dao.pattern.chain.core;
     
@@ -347,10 +354,10 @@
 
 > 步骤 4：Main 是我的演示类
 
+**Main.java**
+ 
 ```markdown
-    
-    **Main.java**
-    
+        
     package com.dao.pattern.chain.main;
     
     import com.dao.pattern.chain.abstracts.AbstractPrice;
