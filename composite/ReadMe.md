@@ -53,10 +53,10 @@
 
 > 步骤 1：创建 Biology 类，该类带有 Biology 对象的列表。
 
+**Biology.java**
+
 ```markdown
-    
-   **Biology.java**
-    
+        
    package com.dao.pattern.composite.core;
    
    import java.io.Serializable;
@@ -116,12 +116,13 @@
 
 
 ```
+
 > 步骤 2：使用 Biology 类来创建和打印生物圈的层次结构。
+
+**Main.java**
+
 ```markdown
-  
-  
-    **Main.java**
-  
+    
     package com.dao.pattern.composite.main;
     
     import com.alibaba.fastjson.JSON;
