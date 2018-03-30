@@ -148,7 +148,7 @@
          * 
          * @author 阿导
          * @time 2018/3/29
-         * @CopyRight 杭州微财科技有限公司
+         * @CopyRight 万物皆导
          * @param
          * @return java.sql.Timestamp
          */
@@ -160,7 +160,7 @@
          * 存储游戏进行的时间
          * @author 阿导
          * @time 2018/3/29
-         * @CopyRight 杭州微财科技有限公司
+         * @CopyRight 万物皆导
          * @param time
          * @return void
          */
@@ -172,7 +172,7 @@
          * 存档
          * @author 阿导
          * @time 2018/3/29
-         * @CopyRight 杭州微财科技有限公司
+         * @CopyRight 万物皆导
          * @param
          * @return com.dao.pattern.memento.vo.Memento
          */
@@ -186,7 +186,7 @@
          * 
          * @author 阿导
          * @time 2018/3/29
-         * @CopyRight 杭州微财科技有限公司
+         * @CopyRight 万物皆导
          * @param memento
          * @return void
          */
