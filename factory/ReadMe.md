@@ -3,6 +3,7 @@
 ***
 
 ###### 工厂模式（Factory Pattern）是 Java 中最常用的设计模式之一。这种类型的设计模式属于创建型模式，它提供了一种创建对象的最佳方式。
+
 ###### 在工厂模式中，我们在创建对象时不会对客户端暴露创建逻辑，并且是通过使用一个共同的接口来指向新创建的对象。
 
 ***
@@ -48,7 +49,7 @@
 ***
 
 ## 实现
-###### 我们将创建一个 Iliquid 接口和实现 Iliquid 接口的实体类。下一步是定义工厂类 LiquidFactory。Main是我的启动类，演示类使用 LiquidFactory 来获取 LiquidFactory 对象。它将向 LiquidFactory 传递具体液体信息（Gasoline / Perfume），以便获取它所需对象的类型。
+###### 我将创建一个 Iliquid 接口和实现 Iliquid 接口的实体类。下一步是定义工厂类 LiquidFactory。Main是我的启动类，演示类使用 LiquidFactory 来获取 LiquidFactory 对象。它将向 LiquidFactory 传递具体液体信息（Gasoline / Perfume），以便获取它所需对象的类型。
 
 ![工厂模式的 UML 图](https://github.com/wanwujiedao/pattern/blob/master/img/factory_pattern_uml_diagram.jpg)
 
