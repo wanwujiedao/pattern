@@ -54,9 +54,9 @@
 
 ## 实现
 
-###### 观察者模式使用三个类 Subject、Observer 和 Client。Subject 对象带有绑定观察者到 Client 对象和从 Client 对象解绑观察者的方法。我们创建 Subject 类、Observer 抽象类和扩展了抽象类 Observer 的实体类。
+###### 观察者模式使用两个个类 Goods、Observer 。Goods 可以添加观察者，观察者会根据观察商品进行判断自己是否有能力购买。我们创建 Goods 类、Observer 抽象类和扩展了抽象类 Observer 的实体类。
 
-###### Main，我们的演示类使用 Subject 和实体类对象来演示观察者模式。
+###### Main，我们的演示类使用 Goods 和实体类对象来演示观察者模式。
 
 ![观察者模式的 UML 图](https://github.com/wanwujiedao/pattern/blob/master/img/observer_pattern_uml_diagram.jpg)
 
