@@ -51,7 +51,7 @@
 
 ###### MediatorPatternDemo，我的演示类使用 User 对象来显示他们之间的通信。
 
-![中介者模式的 UML 图](https://github.com/wanwujiedao/pattern/blob/master/img/mediator_pattern_uml_diagram.jpg)
+![中介者模式的 UML 图](../img/mediator_pattern_uml_diagram.jpg)
 
 
 > 步骤 1：创建中介类。
