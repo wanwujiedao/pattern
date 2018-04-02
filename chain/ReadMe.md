@@ -62,7 +62,7 @@
 
 ###### 我们创建抽象类 AbstractLogger，带有详细的日志记录级别。然后我们创建三种类型的记录器，都扩展了 AbstractLogger。每个记录器消息的级别是否属于自己的级别，如果是则相应地打印出来，否则将不打印并把消息传给下一个记录器。
 
-![责任链模式的 UML 图](https://github.com/wanwujiedao/pattern/blob/master/img/chain_pattern_uml_diagram.jpg)
+![责任链模式的 UML 图](../img/chain_pattern_uml_diagram.jpg)
 
 > 步骤 1：创建抽象的记录器类。
 
