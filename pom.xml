@@ -32,6 +32,7 @@
         <module>state</module>
         <module>nullobject</module>
         <module>strategy</module>
+        <module>template</module>
     </modules>
 
     <dependencies>
@@ -41,7 +42,12 @@
             <artifactId>fastjson</artifactId>
             <version>1.2.46</version>
         </dependency>
-
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+            <version>4.10</version>
+        </dependency>
     </dependencies>
 
 
