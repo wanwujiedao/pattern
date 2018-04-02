@@ -50,7 +50,7 @@
 
 ###### Broker 对象使用命令模式，基于命令的类型确定哪个对象执行哪个命令。Main，我的演示类使用 Broker 类来演示命令模式。
 
-![命令模式的 UML 图](https://github.com/wanwujiedao/pattern/blob/master/img/command_pattern_uml_diagram.jpg)
+![命令模式的 UML 图](../img/command_pattern_uml_diagram.jpg)
 
 
 > 步骤 1：创建一个命令接口。
