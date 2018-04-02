@@ -136,7 +136,8 @@
  ***
  
  ## 特别鸣谢
- **感谢菜鸟教程，文档学习源于：[设计模式](http://www.runoob.com/design-pattern/design-pattern-tutorial.html{:target="_blank"})**
+ 
+ **感谢菜鸟教程，文档学习源于：<a href="http://www.runoob.com/design-pattern/design-pattern-tutorial.html" target="_blank">设计模式</a>**
  
 
 
