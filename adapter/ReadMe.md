@@ -68,7 +68,7 @@
 
 ###### ContainerImpl 使用适配器类 ContainerAdapter 传递所盛放物体的状态，不需要知道能盛放什么样状态的物体的实际类。Main，我的演示类使用 ContainerImpl 类来盛放不同的物体。
 
-![适配器模式的 UML 图](https://github.com/wanwujiedao/pattern/blob/master/img/adapter_pattern_uml_diagram.jpg)
+![适配器模式的 UML 图](../img/adapter_pattern_uml_diagram.jpg)
 
 > 步骤 1：盛放容器和盛放处理的接口。
 
