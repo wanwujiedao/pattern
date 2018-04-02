@@ -14,7 +14,7 @@ public class HumanFactory {
     private static final int ADULT=18;
 
     public static AbstractHuman getHuman(String name,int age){
-        if(age<18){
+        if(age<ADULT){
             return new NullHuman();
         }
 
