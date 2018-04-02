@@ -52,7 +52,7 @@
 
 ###### Main，我的演示类使用实体类 Repository 来存储想要的数据，其中数据使用的是泛型，内部是通过数组动态扩容存储信息的。
 
-![迭代器模式的 UML 图](https://github.com/wanwujiedao/pattern/blob/master/img/iterator_pattern_uml_diagram.jpg)
+![迭代器模式的 UML 图](../img/iterator_pattern_uml_diagram.jpg)
 
 > 步骤 1：创建接口。
 
