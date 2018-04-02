@@ -58,7 +58,7 @@
 
 ###### Main，我们的演示类使用 Goods 和实体类对象来演示观察者模式。
 
-![观察者模式的 UML 图](https://github.com/wanwujiedao/pattern/blob/master/img/observer_pattern_uml_diagram.jpg)
+![观察者模式的 UML 图](../img/observer_pattern_uml_diagram.jpg)
 
 
 > 步骤 1：创建 Goods 类。
