@@ -14,7 +14,7 @@
 
 ###### Main，我们的演示类使用 HumanFactory 来演示空对象模式的用法。
 
-![空对象模式的 UML 图](https://github.com/wanwujiedao/pattern/blob/master/img/null_object_pattern_uml_diagram.jpg)
+![空对象模式的 UML 图](../img/null_object_pattern_uml_diagram.jpg)
 
 
 > 步骤 1：创建一个抽象类。
@@ -201,7 +201,7 @@
         private static final int ADULT=18;
     
         public static AbstractHuman getHuman(String name,int age){
-            if(age<18){
+            if(age<ADULT){
                 return new NullHuman();
             }
     
