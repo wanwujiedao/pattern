@@ -137,5 +137,5 @@
  ## 特别鸣谢
  **感谢菜鸟教程,文档学习源于：[设计模式]**
  
- [设计模式]:http://www.runoob.com/design-pattern/strategy-pattern.html,"设计模式"
+ [设计模式]:http://www.runoob.com/design-pattern/strategy-pattern.html
 
