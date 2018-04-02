@@ -105,7 +105,7 @@
 
 下面用一个图片来整体描述一下设计模式之间的关系：
 
-![设计模式之间的关系](https://github.com/wanwujiedao/pattern/blob/master/img/the-relationship-between-design-patterns.jpg)
+![设计模式之间的关系](img/the-relationship-between-design-patterns.jpg)
 
 ***
 
