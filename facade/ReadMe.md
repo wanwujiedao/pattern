@@ -58,7 +58,7 @@
 
 ###### AnimalsFacade 类使用实体类来代表用户对这些类的调用。Main，我的演示类使用 AnimalsFacade 类来显示结果。
 
-![外观模式的 UML 图](https://github.com/wanwujiedao/pattern/blob/master/img/facade_pattern_uml_diagram.jpg)
+![外观模式的 UML 图](../img/facade_pattern_uml_diagram.jpg)
 
 
 > 步骤 1：创建一个接口。
