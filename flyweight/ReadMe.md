@@ -62,7 +62,7 @@
 
 ###### Main，我的演示类使用 AnimalsFactory 来获取 Animals 对象。它将向 AnimalsFactory 传递信息（男 / 女 / 未知的性别），以便获取它所需对象的颜色。
 
-![享元模式的 UML 图](https://github.com/wanwujiedao/pattern/blob/master/img/flyweight_pattern_uml_diagram.jpg)
+![享元模式的 UML 图](../img/flyweight_pattern_uml_diagram.jpg)
 
 > 步骤 1：创建一个接口。
 
