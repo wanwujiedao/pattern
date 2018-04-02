@@ -52,7 +52,7 @@
 ###### Main，我的演示类使用 PenDecorator 来装饰 Pen 对象。
 
 
-![装饰器模式的 UML 图](https://github.com/wanwujiedao/pattern/blob/master/img/decorator_pattern_uml_diagram.jpg)
+![装饰器模式的 UML 图](../img/decorator_pattern_uml_diagram.jpg)
 
 > 步骤 1：创建一个接口。
 
