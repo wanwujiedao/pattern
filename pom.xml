@@ -31,6 +31,7 @@
         <module>observer</module>
         <module>state</module>
         <module>nullobject</module>
+        <module>strategy</module>
     </modules>
 
     <dependencies>
