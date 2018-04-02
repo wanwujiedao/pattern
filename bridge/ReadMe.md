@@ -53,7 +53,7 @@
 ## 实现
 我们有一个作为桥接实现的 Voice 接口和实现了 Voice 接口的实体类 VoiceManImpl、VoiceManImpl。Animals 是一个抽象类，将使用 Voice 的对象。Main，我的演示类使用 Animals 类来让人发出不同的声音。
 
-![桥接模式的 UML 图](https://github.com/wanwujiedao/pattern/blob/master/img/bridge_pattern_uml_diagram.jpg)
+![桥接模式的 UML 图](../img/bridge_pattern_uml_diagram.jpg)
 
 > 步骤 1：创建桥接实现接口。
 
