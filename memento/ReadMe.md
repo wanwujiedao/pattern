@@ -58,7 +58,7 @@
 
 ###### Main，我的演示类使用 MementoMaker 和 Game 对象来显示对象的状态恢复。
 
-![备忘录模式的 UML 图](https://github.com/wanwujiedao/pattern/blob/master/img/memento_pattern_uml_diagram.jpg)
+![备忘录模式的 UML 图](../img/memento_pattern_uml_diagram.jpg)
 
 
 > 步骤 1：创建 Memento 类。
