@@ -76,7 +76,7 @@
 
 ###### Main是我的启动类，我的演示类使用 LiquidCache 类来获取 Liquid 对象。
 
-![原型模式的 UML 图](https://github.com/wanwujiedao/pattern/blob/master/img/prototype_pattern_uml_diagram.jpg)
+![原型模式的 UML 图](../img/prototype_pattern_uml_diagram.jpg)
 
 > 步骤 1：创建一个实现了 Clonable 接口的抽象类。
 
