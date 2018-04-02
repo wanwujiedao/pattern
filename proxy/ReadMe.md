@@ -77,7 +77,7 @@
 
 ###### Main，我的演示类使用 ProxyDataBase 来获取要加载的 DataBase 对象，看当前是否连的是相同的库，若是相同的库，直接用。
 
-![代理模式的 UML 图](https://github.com/wanwujiedao/pattern/blob/master/img/proxy_pattern_uml_diagram.jpg)
+![代理模式的 UML 图](../img/proxy_pattern_uml_diagram.jpg)
 
 
 > 步骤 1：创建一个接口。
