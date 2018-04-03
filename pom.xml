@@ -33,6 +33,7 @@
         <module>nullobject</module>
         <module>strategy</module>
         <module>template</module>
+        <module>visitor</module>
     </modules>
 
     <dependencies>
