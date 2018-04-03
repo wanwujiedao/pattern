@@ -37,7 +37,7 @@
 
 ## 实现
 
-###### 我们将创建 Iliquid 和 IUse 接口和实现这些接口的实体类。下一步是创建抽象工厂类 AbstractFactory。接着定义工厂类 LiquidFactory 和 UseFactory，这两个工厂类都是扩展了 AbstractFactory。然后创建一个工厂创造器/生成器类 FactoryProducer。
+###### 我将创建 Iliquid 和 IUse 接口和实现这些接口的实体类。下一步是创建抽象工厂类 AbstractFactory。接着定义工厂类 LiquidFactory 和 UseFactory，这两个工厂类都是扩展了 AbstractFactory。然后创建一个工厂创造器/生成器类 FactoryProducer。
 ###### Main是我的启动类，演示类使用 FactoryProducer 来获取 AbstractFactory 对象。它将向 AbstractFactory 传递液体信息 Iliquid（Gasoline / Perfume），以便获取它所需对象的类型。同时它还向 AbstractFactory 传递用处信息 IUse（GasolineUse / PerfumeUse），以便获取它所需对象的类型。
 
 ![抽象工厂模式的 UML 图](../img/abstractfactory_pattern_uml_diagram.jpg)
