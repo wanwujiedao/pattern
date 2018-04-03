@@ -48,11 +48,11 @@
 
 ## 实现
 
-###### 我们将创建一个定义操作的 AbstractDabaseSource 抽象类，其中，模板方法设置为 final，这样它就不会被重写。UserDao 和 OrderDao 是扩展了 AbstractDabaseSource 的实体类，它们重写了抽象类的方法。
+###### 我将创建一个定义操作的 AbstractDabaseSource 抽象类，其中，模板方法设置为 final，这样它就不会被重写。UserDao 和 OrderDao 是扩展了 AbstractDabaseSource 的实体类，它们重写了抽象类的方法。
 
 ###### 顶一个抽象类 DataBase 模拟数据源，继承其子类的 UserDataBase 和 OrderDataBase 分别模拟用户库和订单库。
 
-###### Main，我们的演示类使用 AbstractDabaseSource 来演示模板模式的用法。
+###### Main，我的演示类使用 AbstractDabaseSource 来演示模板模式的用法。
 
 ![模板模式的 UML 图](../img/template_pattern_uml_diagram.jpg)
 
