@@ -35,7 +35,6 @@
         <module>template</module>
         <module>visitor</module>
     </modules>
-
     <dependencies>
         <!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
         <dependency>
