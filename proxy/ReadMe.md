@@ -73,7 +73,7 @@
 
 ## 实现
 
-###### 我们将创建一个 DataBase 接口和实现了 DataBase 接口的实体类。ProxyDataBase 是一个代理类，减少 RealDataBase 对象加载的 IO 通信。
+###### 我将创建一个 DataBase 接口和实现了 DataBase 接口的实体类。ProxyDataBase 是一个代理类，减少 RealDataBase 对象加载的 IO 通信。
 
 ###### Main，我的演示类使用 ProxyDataBase 来获取要加载的 DataBase 对象，看当前是否连的是相同的库，若是相同的库，直接用。
 
