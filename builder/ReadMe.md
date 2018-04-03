@@ -50,11 +50,12 @@
 ***
 
 ## 实现
-###### 我们假设在超市买东西，一般在超市买东西分成按数量（Number）结算，或者按质量（Quality）结算.按数量结算的比如牛奶（Milk）、水饺（Dumplings）;还有按质量结算的，比如大米（Rice）、苹果（Apple）。
 
-###### 我们将创建一个表示商品（IGoods）的接口，和实现 IGoods 接口的实体(GoodsImpl)，以及商品结算的接口 ISettlement以及结算的实现类（SettlementImpl）.
+###### 我假设在超市买东西，一般在超市买东西分成按数量（Number）结算，或者按质量（Quality）结算.按数量结算的比如牛奶（Milk）、水饺（Dumplings）;还有按质量结算的，比如大米（Rice）、苹果（Apple）。
 
-###### 然后我们创建一个 Buy 类，带有 IGoods 的 ArrayList 和一个通过结合 IGoods 来创建不同类型的 Buy 对象的 BuyBuilder。Main是我的启动类，演示类使用 BuyBuilder 来创建一个 Buy。
+###### 我将创建一个表示商品（IGoods）的接口，和实现 IGoods 接口的实体(GoodsImpl)，以及商品结算的接口 ISettlement以及结算的实现类（SettlementImpl）.
+
+###### 然后我创建一个 Buy 类，带有 IGoods 的 ArrayList 和一个通过结合 IGoods 来创建不同类型的 Buy 对象的 BuyBuilder。Main是我的启动类，演示类使用 BuyBuilder 来创建一个 Buy。
 
 ![建造者模式的 UML 图](../img/builder_pattern_uml_diagram.jpg)
 
