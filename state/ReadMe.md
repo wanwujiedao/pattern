@@ -58,9 +58,9 @@
 
 ## 实现
 
-###### 我们将创建一个 State 接口和实现了 State 接口的实体状态类。Saiyan [赛亚人]是一个带有某个状态的类。
+###### 我将创建一个 State 接口和实现了 State 接口的实体状态类。Saiyan [赛亚人]是一个带有某个状态的类。
 
-###### Main，我们的演示类使用 Saiyan 和状态对象来演示 Saiyan 在状态改变时的行为变化。
+###### Main，我的演示类使用 Saiyan 和状态对象来演示 Saiyan 在状态改变时的行为变化。
 
 ![状态模式的 UML 图](../img/state_pattern_uml_diagram.jpg)
 
