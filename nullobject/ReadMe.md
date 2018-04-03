@@ -10,9 +10,9 @@
 
 ## 实现
 
-###### 我们将创建一个定义操作（在这里，是能上网的人）的 AbstractHuman 抽象类，和扩展了 AbstractHuman 类的实体类。工厂类 HumanFactory 基于年龄来返回 AdultHuman 或 NullHuman 对象。
+###### 我将创建一个定义操作（在这里，是能上网的人）的 AbstractHuman 抽象类，和扩展了 AbstractHuman 类的实体类。工厂类 HumanFactory 基于年龄来返回 AdultHuman 或 NullHuman 对象。
 
-###### Main，我们的演示类使用 HumanFactory 来演示空对象模式的用法。
+###### Main，我的演示类使用 HumanFactory 来演示空对象模式的用法。
 
 ![空对象模式的 UML 图](../img/null_object_pattern_uml_diagram.jpg)
 
