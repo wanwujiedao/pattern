@@ -48,9 +48,9 @@
 
 ## 实现
 
-###### 我们将创建一个定义接受操作的 FileOptoin 接口。FileRead、FileWrite、FileExecute 和 File 是实现了 FileOptoin 接口的实体类。我们将定义另一个接口 Visitor，它定义了访问者类的操作。File 使用实体访问者来执行相应的动作。
+###### 我将创建一个定义接受操作的 FileOptoin 接口。FileRead、FileWrite、FileExecute 和 File 是实现了 FileOptoin 接口的实体类。我将定义另一个接口 Visitor，它定义了访问者类的操作。File 使用实体访问者来执行相应的动作。
 
-###### Main，我们的演示类使用 File、Visitor 类来演示访问者模式的用法。
+###### Main，我的演示类使用 File、Visitor 类来演示访问者模式的用法。
 
 ![访问者模式的 UML 图](../img/visitor_pattern_uml_diagram.jpg)
 
