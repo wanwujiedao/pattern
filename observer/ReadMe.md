@@ -54,9 +54,9 @@
 
 ## 实现
 
-###### 观察者模式使用两个个类 Goods、Observer 。Goods 可以添加观察者，观察者会根据观察商品进行判断自己是否有能力购买。我们创建 Goods 类、Observer 抽象类和扩展了抽象类 Observer 的实体类。
+###### 观察者模式使用两个个类 Goods、Observer 。Goods 可以添加观察者，观察者会根据观察商品进行判断自己是否有能力购买。我创建 Goods 类、Observer 抽象类和扩展了抽象类 Observer 的实体类。
 
-###### Main，我们的演示类使用 Goods 和实体类对象来演示观察者模式。
+###### Main，我的演示类使用 Goods 和实体类对象来演示观察者模式。
 
 ![观察者模式的 UML 图](../img/observer_pattern_uml_diagram.jpg)
 
