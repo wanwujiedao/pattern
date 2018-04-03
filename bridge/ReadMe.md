@@ -6,7 +6,7 @@
 
 ###### 这种模式涉及到一个作为桥接的接口，使得实体类的功能独立于接口实现类。这两种类型的类可被结构化改变而互不影响。
 
-###### 我们通过下面的实例来演示桥接模式（Bridge Pattern）的用法。其中，可以使用相同的抽象类方法但是不同的桥接实现类，来区分不同的人。
+###### 我通过下面的实例来演示桥接模式（Bridge Pattern）的用法。其中，可以使用相同的抽象类方法但是不同的桥接实现类，来区分不同的人。
 
 ***
 
@@ -51,7 +51,8 @@
 ***
 
 ## 实现
-我们有一个作为桥接实现的 Voice 接口和实现了 Voice 接口的实体类 VoiceManImpl、VoiceManImpl。Animals 是一个抽象类，将使用 Voice 的对象。Main，我的演示类使用 Animals 类来让人发出不同的声音。
+
+###### 我有一个作为桥接实现的 Voice 接口和实现了 Voice 接口的实体类 VoiceManImpl、VoiceManImpl。Animals 是一个抽象类，将使用 Voice 的对象。Main，我的演示类使用 Animals 类来让人发出不同的声音。
 
 ![桥接模式的 UML 图](../img/bridge_pattern_uml_diagram.jpg)
 
