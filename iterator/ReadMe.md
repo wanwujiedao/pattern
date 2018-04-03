@@ -48,7 +48,7 @@
 
 ## 实现
 
-###### 我们将创建一个叙述导航方法的 Iterator 接口和一个返回迭代器的 Container 接口。实现了 Container 接口的实体类将负责实现 Iterator 接口。
+###### 我将创建一个叙述导航方法的 Iterator 接口和一个返回迭代器的 Container 接口。实现了 Container 接口的实体类将负责实现 Iterator 接口。
 
 ###### Main，我的演示类使用实体类 Repository 来存储想要的数据，其中数据使用的是泛型，内部是通过数组动态扩容存储信息的。
 
