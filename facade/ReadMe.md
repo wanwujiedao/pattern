@@ -54,7 +54,7 @@
 
 ## 实现
 
-###### 我们将创建一个 Animals 接口和实现了 Animals 接口的实体类。下一步是定义一个外观类 AnimalsFacade。
+###### 我将创建一个 Animals 接口和实现了 Animals 接口的实体类。下一步是定义一个外观类 AnimalsFacade。
 
 ###### AnimalsFacade 类使用实体类来代表用户对这些类的调用。Main，我的演示类使用 AnimalsFacade 类来显示结果。
 
