@@ -16,9 +16,9 @@
 
 ## 实现
 
-###### 我们将创建 Client、BusinessDelegate、BusinessService、LookUpService、JMSService 和 EJBService 来表示业务代表模式中的各种实体。
+###### 我将创建 Client、BusinessDelegate、BusinessService、BusinessQuery、UserService 和 OrderService 以及空对象 NULLService 来表示业务代表模式中的各种实体。
 
-###### BusinessDelegatePatternDemo，我们的演示类使用 BusinessDelegate 和 Client 来演示业务代表模式的用法。
+###### Main，我的演示类使用 BusinessDelegate 和 Client 来演示业务代表模式的用法。
 
 ![业务代表模式的 UML 图](../img/business_delegate_pattern_uml_diagram.jpg)
 
