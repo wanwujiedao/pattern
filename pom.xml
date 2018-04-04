@@ -35,6 +35,7 @@
         <module>template</module>
         <module>visitor</module>
         <module>mvc</module>
+        <module>business</module>
     </modules>
     <dependencies>
         <!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
