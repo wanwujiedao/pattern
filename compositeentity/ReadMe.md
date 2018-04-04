@@ -16,9 +16,9 @@
 
 ## 实现
 
-###### 我们将创建作为组合实体的 CompositeEntity 对象。CoarseGrainedObject 是一个包含依赖对象的类。
+###### 我将创建作为组合实体的 CompositeEntity 对象。CoarseGrainedObject 是一个包含依赖对象的类。
 
-###### Main，我们的演示类使用 Client 类来演示组合实体模式的用法。
+###### Main，我的演示类使用 Client 类来演示组合实体模式的用法。
 
 
 ![组合实体模式的 UML 图](../img/compositeentity_pattern_uml_diagram.jpg)
