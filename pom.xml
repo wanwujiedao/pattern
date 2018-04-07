@@ -39,6 +39,9 @@
         <module>compositeentity</module>
         <module>dataaccessobject</module>
         <module>frontcontroller</module>
+        <module>interceptingfilter</module>
+        <module>servicelocator</module>
+        <module>transferobject</module>
     </modules>
     <dependencies>
         <!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
