@@ -45,8 +45,10 @@ public class Cache {
      * @return void
      */
     public void addService(Service newService){
+
         if(!mapService.keySet().contains(newService.getName())) {
             mapService.put(newService.getName(), newService);
         }
+
     }
 }

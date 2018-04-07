@@ -20,6 +20,7 @@ public interface Service {
      * @return java.lang.String
      */
     String getName();
+
     /**
      * 处理一些事情
      *

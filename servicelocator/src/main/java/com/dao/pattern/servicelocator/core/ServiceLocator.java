@@ -29,6 +29,7 @@ public class ServiceLocator {
      * @return com.dao.pattern.servicelocator.interfaces.Service
      */
     public static Service getService(String jndiName){
+
         //从缓存获取服务
         Service service = cache.getService(jndiName);
         //未获取到
@@ -43,5 +44,6 @@ public class ServiceLocator {
         }
         //返回服务
         return service;
+
     }
 }

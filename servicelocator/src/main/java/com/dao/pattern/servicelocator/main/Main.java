@@ -25,6 +25,7 @@ public class Main {
      * @return void
      */
     public static void main(String[] args){
+
         //第一次获取订单服务
         Service service= ServiceLocator.getService(InitialContext.ORDER_SERVICE);
         service.dealSomething();
@@ -37,6 +38,7 @@ public class Main {
         //第二次获取订单服务
         service=ServiceLocator.getService(InitialContext.USER_SERVICE);
         service.dealSomething();
+
     }
 
 }

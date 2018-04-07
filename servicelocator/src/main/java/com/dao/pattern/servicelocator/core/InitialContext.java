@@ -33,6 +33,7 @@ public class InitialContext {
      * @return com.dao.pattern.servicelocator.interfaces.Service
      */
     public Service queryService(String jndiName){
+
         if(USER_SERVICE.equalsIgnoreCase(jndiName)){
             System.out.println("查询到用户服务，并创建用户服务");
             return new UserService();
@@ -41,5 +42,6 @@ public class InitialContext {
             return new OrderService();
         }
         return null;
+
     }
 }
