@@ -24,7 +24,7 @@
 
 ![服务定位器模式的 UML 图](../img/servicelocator_pattern_uml_diagram.jpg)
 
-> 步骤 1：创建服务接口 Service。
+> 步骤 1：创建服务接口 Service。 
 
 **Service.java**
 
