@@ -38,6 +38,7 @@
         <module>business</module>
         <module>compositeentity</module>
         <module>dataaccessobject</module>
+        <module>frontcontroller</module>
     </modules>
     <dependencies>
         <!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
