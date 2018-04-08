@@ -28,7 +28,7 @@
 
 > 3、JAVA WEB 中 Apache Tomcat 对 Encoding 的处理，Struts2 的拦截器，jsp servlet 的 Filter。
 
-- **优点*8： 
+- **优点**： 
 
 > 1、降低耦合度。它将请求的发送者和接收者解耦。 
 
