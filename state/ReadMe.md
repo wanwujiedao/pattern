@@ -68,7 +68,7 @@
 
 **State.java**
 
-```markdown
+```java
 
     package com.dao.pattern.state.core;
     
@@ -113,7 +113,7 @@
 
 **SuperSaiyanState.java**
 
-```markdown
+```java
     
     package com.dao.pattern.state.core;
     
@@ -164,7 +164,7 @@
 
 **BlueSaiyanState.java**
 
-```markdown
+```java
 
     package com.dao.pattern.state.core;
     
@@ -214,7 +214,7 @@
 
 **GodSaiyanState.java**
 
-```markdown
+```java
     
     package com.dao.pattern.state.core;
     
@@ -262,11 +262,62 @@
 
 ```
 
+**BlueSaiyanState.java**
+
+```java
+
+package com.dao.pattern.state.core;
+
+import com.dao.pattern.state.vo.Saiyan;
+
+/**
+ * 赛亚人之蓝
+ *
+ * @author 阿导
+ * @version 1.0
+ * @fileName com.dao.pattern.state.core.BlueSaiyanState.java
+ * @CopyRright (c) 2018-万物皆导
+ * @created 2018-03-30 17:32:00
+ */
+public class BlueSaiyanState implements State {
+
+    /**
+     * 处理赛亚人的状态
+     *
+     * @param saiyan
+     * @return void
+     * @author 阿导
+     * @time 2018/3/30
+     * @CopyRight 万物皆导
+     */
+    @Override
+    public void doAction(Saiyan saiyan) {
+        System.out.println("===赛亚人正在向赛亚人之蓝状态改变===");
+        saiyan.setState(this);
+    }
+
+    /**
+     * 赛亚人当前的状态
+     *
+     * @return void
+     * @author 阿导
+     * @time 2018/3/30
+     * @CopyRight 万物皆导
+     */
+    @Override
+    public void getResult() {
+        System.out.println("+++当前为赛亚人之蓝状态+++");
+    }
+}
+
+
+```
+
 > 步骤 3：创建 Saiyan 类。
 
 **Saiyan.java**
 
-```markdown
+```java
     
     package com.dao.pattern.state.vo;
     
@@ -313,24 +364,65 @@
 
 > 步骤 4：使用 Saiyan 来查看当状态 State 改变时的行为变化。
 
-**Context.java**
-```markdown
+**Main.java**
 
-    public class Context {
-       private State state;
-    
-       public Context(){
-          state = null;
-       }
-    
-       public void setState(State state){
-          this.state = state;        
-       }
-    
-       public State getState(){
-          return state;
-       }
+```java
+
+package com.dao.pattern.state.main;
+
+import com.dao.pattern.state.core.BlueSaiyanState;
+import com.dao.pattern.state.core.GodSaiyanState;
+import com.dao.pattern.state.core.State;
+import com.dao.pattern.state.core.SuperSaiyanState;
+import com.dao.pattern.state.vo.Saiyan;
+
+/**
+ * 演示类
+ *
+ * @author 阿导
+ * @version 1.0
+ * @fileName com.dao.pattern.state.main.Main.java
+ * @CopyRright (c) 2018-万物皆导
+ * @created 2018-03-30 17:37:00
+ */
+public class Main {
+
+
+    /**
+     * 主程序入口
+     * @author 阿导
+     * @time 2018/3/30
+     * @CopyRight 万物皆导
+     * @param args
+     * @return void
+     */
+    public static void main(String[] args){
+        //声明赛亚人
+        Saiyan saiyan=new Saiyan();
+
+        //声明超级赛亚人状态
+        State superSaiyanState=new SuperSaiyanState();
+        //声明赛亚人之蓝状态
+        State blueSaiyanState=new BlueSaiyanState();
+        //声明赛亚人之神状态
+        State godSaiyanState=new GodSaiyanState();
+
+        //遇到 boss ，原状态打不过，变成超级赛亚人
+        superSaiyanState.doAction(saiyan);
+        saiyan.getState().getResult();
+
+        //变成超级赛亚人后依旧打不过，正准备变成赛亚人之蓝
+        blueSaiyanState.doAction(saiyan);
+        saiyan.getState().getResult();
+
+        //赛亚人蓝和 boss 势均力敌，只能用赛亚人之神状态进行决一胜负
+        godSaiyanState.doAction(saiyan);
+        saiyan.getState().getResult();
+
+
     }
+}
+
     
 ```
 
